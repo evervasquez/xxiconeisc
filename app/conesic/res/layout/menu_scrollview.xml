@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/MenuDrawer.Widget.Category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/favoritos" />
+
+        <TextView
+            android:id="@+id/xxiconeisc"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_refresh_dark"
+            android:text="XXICONEISC" />
+
+        <TextView
+            android:id="@+id/conocenos"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            android:text="Conocenos" />
+
+        <TextView
+            style="@style/MenuDrawer.Widget.Category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="XXICONEISC" />
+
+        <TextView
+            android:id="@+id/ponentes"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_refresh_dark"
+            android:text="Ponentes" />
+
+        <TextView
+            android:id="@+id/conferencias"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            android:text="Conferencias" />
+
+        <TextView
+            android:id="@+id/talleres"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            android:text="Talleres" />
+
+        <TextView
+            android:id="@+id/concursos"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            android:text="Concursos" />
+
+        <TextView
+            android:id="@+id/actividades"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            android:text="Actividades" />
+
+        <TextView
+            style="@style/MenuDrawer.Widget.Category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Como Llegar" />
+
+        <TextView
+            android:id="@+id/terrestre"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_refresh_dark"
+            android:text="Via Terrestre" />
+
+        <TextView
+            android:id="@+id/aerea"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            android:text="Via Aerea" />
+
+        <TextView
+            android:id="@+id/fluvial"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            android:text="Via Fluvial" />
+
+        <TextView
+            style="@style/MenuDrawer.Widget.Category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tarapoto" />
+
+        <TextView
+            android:id="@+id/hoteles"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_refresh_dark"
+            android:text="Hoteles" />
+
+        <TextView
+            android:id="@+id/restaurante"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            android:text="Restaurantes" />
+
+        <TextView
+            android:id="@+id/turismo"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            android:text="Turismo" />
+    </LinearLayout>
+
+</ScrollView>
