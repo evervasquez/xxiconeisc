@@ -19,6 +19,7 @@ public class conferencias extends SherlockFragment {
 	private static final String TAG = "SampleTimesSquareActivity";
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		getSherlockActivity().getSupportActionBar().setTitle("XXICONEISC - Conferencias");
 		fecha = new fechas();
 	    View root = inflater.inflate(R.layout.conferencias, container, false);
 	    final CalendarPickerView calendar = (CalendarPickerView) root.findViewById(R.id.conferenciasView);

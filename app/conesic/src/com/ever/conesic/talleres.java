@@ -18,6 +18,7 @@ public class talleres extends SherlockFragment {
 	 private static final String TAG = "SampleTimesSquareActivity";
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		getSherlockActivity().getSupportActionBar().setTitle("XXICONEISC - Talleres");
 	    View root = inflater.inflate(R.layout.talleres, container, false);
 	    fecha = new fechas();
 	    final CalendarPickerView calendar = (CalendarPickerView) root.findViewById(R.id.talleresView);

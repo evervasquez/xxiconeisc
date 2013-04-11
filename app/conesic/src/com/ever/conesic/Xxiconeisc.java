@@ -11,6 +11,7 @@ public class Xxiconeisc extends SherlockFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		getSherlockActivity().getSupportActionBar().setTitle("XXICONEISC");
 		return inflater.inflate(R.layout.activity_xxiconeisc, container, false);
 	}
 }
