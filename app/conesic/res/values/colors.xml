@@ -1,7 +1,7 @@
 <resources>
 
-    <color name="md__transparent">#00000000</color>
-	<color name="black">#FF000000</color>
+ <color name="md__transparent">#00000000</color>
+  <color name="black">#FF000000</color>
     <color name="md__defaultBackground">#FF555555</color>
     <color name="calendar_active_month_bg">#fff5f7f9</color>
   <color name="calendar_bg">#ffffffff</color>
@@ -13,4 +13,15 @@
   <color name="calendar_text_selected">#ffffffff</color>
   <color name="calendar_text_unselectable">#7f778088</color>
   <color name="md__defaultBackground">#FF555555</color>
+  
+      <color name="negro">#000000</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="grisClaro">#DBDBDB</color>
+    <color name="naranjado_1">#F7BE45</color>
+    <color name="naranjado_2">#F7D896</color>
+    <color name="azul_0">#0097FE</color>
+    <color name="azul_1">#0042A8</color>
+    <color name="rojo">#F70303</color>
+    <color name="verde_1">#2AFF00</color>
+    <color name="verde_2">#2A9700</color>
 </resources>

@@ -1,5 +1,6 @@
 package com.ever.conesic;
 
+import com.actionbarsherlock.app.SherlockFragment;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
@@ -11,37 +12,57 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class terrestre extends android.support.v4.app.FragmentActivity {
+public class terrestre extends SherlockFragment {
 
 	private GoogleMap mMap;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.terrestre);
-        setUpMapIfNeeded();
-		
-        mMap.setOnInfoWindowClickListener(new OnInfoWindowClickListener() {			
+	 @Override
+	 public void onCreate(Bundle savedInstanceState) {
+	  super.onCreate(savedInstanceState);
+	  Log.v("ListFragment", "onCreate()");
+	  
+	 }
+	 
+	 @Override
+	 public void onActivityCreated(Bundle savedInstanceState) {
+	  super.onActivityCreated(savedInstanceState);
+	  getSherlockActivity().getSupportActionBar().setTitle("XXICONEISC - Ponentes");
+	  Log.v("ListFragment", "onActivityCreated().");
+	  Log.v("ListsavedInstanceState", savedInstanceState == null ? "true" : "false");
+	  setUpMapIfNeeded();
+      mMap.setOnInfoWindowClickListener(new OnInfoWindowClickListener() {			
 			@Override
 			public void onInfoWindowClick(Marker marker) {
 				// TODO Auto-generated method stub
 				Toast.makeText(
-						terrestre.this, 
+						getActivity(), 
 						"Click en infoWindow",
 						Toast.LENGTH_SHORT).show();
 			}
 		});
-    }
+	 }
+	 
+	 public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			   Bundle savedInstanceState) {
+			  if (container == null) {
+			            return null;
+			        }
+			  View view = inflater.inflate(R.layout.terrestre, container, false);
+			  return view;
+			 }
 
     @Override
-    protected void onResume() {
+	public void onResume() {
         super.onResume();
         setUpMapIfNeeded();
     }
@@ -50,8 +71,7 @@ public class terrestre extends android.support.v4.app.FragmentActivity {
         // Do a null check to confirm that we have not already instantiated the map.
         if (mMap == null) {
             // Try to obtain the map from the SupportMapFragment.
-            mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
-                    .getMap();
+            mMap = ((SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map)).getMap();
             // Check if we were successful in obtaining the map.
             if (mMap != null) {
                 setUpMap();
@@ -76,8 +96,8 @@ public class terrestre extends android.support.v4.app.FragmentActivity {
         
 
         CustomInfoWindowAdapter() {
-            mWindow = getLayoutInflater().inflate(R.layout.custom_info_window, null);
-            mContents = getLayoutInflater().inflate(R.layout.custom_info_contents, null);
+        	mWindow = getActivity().getLayoutInflater().inflate(R.layout.custom_info_window, null);
+            mContents = getActivity().getLayoutInflater().inflate(R.layout.custom_info_contents, null);
             //mostrarMarcador(-6.487659429495001,-77.36801600456238,"Otro","Population: 4,137,400");
         }
 
