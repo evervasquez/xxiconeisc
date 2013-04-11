@@ -127,6 +127,9 @@ public class MainActivity extends SherlockFragmentActivity implements View.OnCli
 		case R.id.talleres:
 			newFragment = new talleres();
 			break;
+		case R.id.terrestre:
+			newFragment = new terrestre();
+			break;
 		case R.id.turismo:
 			newFragment = new turismo();
 			break;
