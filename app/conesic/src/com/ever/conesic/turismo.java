@@ -15,6 +15,7 @@ public class turismo extends SherlockFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		getSherlockActivity().getSupportActionBar().setTitle("XXICONEISC - Turismo");
 		View root = inflater.inflate(R.layout.turismo, container, false);
 		String urls[] = { 
 				"http://farm7.staticflickr.com/6101/6853156632_6374976d38_c.jpg",
