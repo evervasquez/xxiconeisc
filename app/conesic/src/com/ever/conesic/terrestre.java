@@ -71,7 +71,7 @@ public class terrestre extends SherlockFragment {
         // Do a null check to confirm that we have not already instantiated the map.
         if (mMap == null) {
             // Try to obtain the map from the SupportMapFragment.
-            mMap = ((SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map)).getMap();
+            mMap = ((SupportMapFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
             // Check if we were successful in obtaining the map.
             if (mMap != null) {
                 setUpMap();
@@ -178,9 +178,7 @@ public class terrestre extends SherlockFragment {
 	}*/
     
     private void mostrarMarcador(double lat, double lng, String title, String snippet){
-		mMap.addMarker(new MarkerOptions()
-		.position(new LatLng(lat, lng))
-		.title(title)
+		mMap.addMarker(new MarkerOptions().position(new LatLng(lat, lng)).title(title)
 		.snippet(snippet)
         .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher)));
 	}
