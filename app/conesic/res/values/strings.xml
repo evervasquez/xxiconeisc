@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">xxiconeisc</string>
+    <string name="app_name">coneisc</string>
     <string name="sample_content">Sample of dragging the content.\nThe menu consists of a ListView, for which the
         active position is saved through configuration changes.\nAdditionally, if the menu is open, a back press will
         close it.</string>
@@ -31,4 +31,10 @@
     <string name="day_name_format">EEE</string>
   <string name="invalid_date">Date must be between %1$s and %2$s.</string>
   <string name="month_name_format">MMMM yyyy</string>
+  <string name="xxiconeisc">XXICONEISC</string>
+  <string name="conocenos">Conocenos</string>
+  <string name="ponentes">Ponentes</string>
+  <string name="conferencias">Conferencias</string>
+  <string name="talleres">Talleres</string>
+  <string name="concursos">Concursos</string>
 </resources>

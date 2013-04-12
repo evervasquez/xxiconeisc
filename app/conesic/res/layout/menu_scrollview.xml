@@ -20,61 +20,61 @@
             style="@style/MenuDrawer.Widget.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_action_refresh_dark"
-            android:text="XXICONEISC" />
+            android:drawableLeft="@drawable/coneisc"
+            android:text="@string/xxiconeisc" />
 
         <TextView
             android:id="@+id/conocenos"
             style="@style/MenuDrawer.Widget.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_action_select_all_dark"
-            android:text="Conocenos" />
+            android:drawableLeft="@drawable/conocenos"
+            android:text="@string/conocenos" />
 
         <TextView
             style="@style/MenuDrawer.Widget.Category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="XXICONEISC" />
+            android:text="@string/xxiconeisc" />
 
         <TextView
             android:id="@+id/ponentes"
             style="@style/MenuDrawer.Widget.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_action_refresh_dark"
-            android:text="Ponentes" />
+            android:drawableLeft="@drawable/ponentes"
+            android:text="@string/ponentes" />
 
         <TextView
             android:id="@+id/conferencias"
             style="@style/MenuDrawer.Widget.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_action_select_all_dark"
-            android:text="Conferencias" />
+            android:drawableLeft="@drawable/conferencias"
+            android:text="@string/conferencias" />
 
         <TextView
             android:id="@+id/talleres"
             style="@style/MenuDrawer.Widget.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_action_select_all_dark"
-            android:text="Talleres" />
+            android:drawableLeft="@drawable/talleres"
+            android:text="@string/talleres" />
 
         <TextView
             android:id="@+id/concursos"
             style="@style/MenuDrawer.Widget.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_action_select_all_dark"
-            android:text="Concursos" />
+            android:drawableLeft="@drawable/concursos"
+            android:text="@string/concursos" />
 
         <TextView
             android:id="@+id/actividades"
             style="@style/MenuDrawer.Widget.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            android:drawableLeft="@drawable/actividades"
             android:text="Actividades" />
 
         <TextView
@@ -88,7 +88,7 @@
             style="@style/MenuDrawer.Widget.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_action_refresh_dark"
+            android:drawableLeft="@drawable/terrestre"
             android:text="Via Terrestre" />
 
         <TextView
@@ -96,7 +96,7 @@
             style="@style/MenuDrawer.Widget.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            android:drawableLeft="@drawable/aerea"
             android:text="Via Aerea" />
 
         <TextView
@@ -104,7 +104,7 @@
             style="@style/MenuDrawer.Widget.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            android:drawableLeft="@drawable/fluvial"
             android:text="Via Fluvial" />
 
         <TextView
@@ -118,7 +118,7 @@
             style="@style/MenuDrawer.Widget.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_action_refresh_dark"
+            android:drawableLeft="@drawable/hoteles"
             android:text="Hoteles" />
 
         <TextView
@@ -126,7 +126,7 @@
             style="@style/MenuDrawer.Widget.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            android:drawableLeft="@drawable/restaurante"
             android:text="Restaurantes" />
 
         <TextView
@@ -134,7 +134,7 @@
             style="@style/MenuDrawer.Widget.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            android:drawableLeft="@drawable/turismo"
             android:text="Turismo" />
     </LinearLayout>
 

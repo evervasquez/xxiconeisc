@@ -1,6 +1,7 @@
 package com.ever.conesic;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.MenuItem;
 
 import menuslide.MenuDrawer;
 
@@ -12,6 +13,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
+import android.widget.Toast;
 
 //import android.widget.GridView;
 
@@ -37,6 +39,7 @@ public class MainActivity extends SherlockFragmentActivity implements
 
 		// final ActionBar bar = getSupportActionBar();
 		getSupportActionBar().setTitle("CONEISCXXI");
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
 			getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -102,7 +105,17 @@ public class MainActivity extends SherlockFragmentActivity implements
 
 		super.onBackPressed();
 	}
+	
+	public boolean onOptionsItemSelected(MenuItem item) {
 
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			mMenuDrawer.openMenu();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
 	@Override
 	public void onClick(View v) {
 		mMenuDrawer.setActiveView(v);
