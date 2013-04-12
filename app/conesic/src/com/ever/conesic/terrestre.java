@@ -38,7 +38,7 @@ public class terrestre extends SherlockFragment {
 	 @Override
 	 public void onActivityCreated(Bundle savedInstanceState) {
 	  super.onActivityCreated(savedInstanceState);
-	  getSherlockActivity().getSupportActionBar().setTitle("XXICONEISC - Ponentes");
+	  getSherlockActivity().getSupportActionBar().setTitle("XXICONEISC - Mapa");
 	  Log.v("ListFragment", "onActivityCreated().");
 	  Log.v("ListsavedInstanceState", savedInstanceState == null ? "true" : "false");
 	  setUpMapIfNeeded();
