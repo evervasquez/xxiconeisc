@@ -184,9 +184,7 @@ public class terrestre extends SherlockFragment {
 	}*/
     
     private void mostrarMarcador(double lat, double lng, String title, String snippet){
-		mMap.addMarker(new MarkerOptions()
-		.position(new LatLng(lat, lng))
-		.title(title)
+		mMap.addMarker(new MarkerOptions().position(new LatLng(lat, lng)).title(title)
 		.snippet(snippet)
         .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher)));
 	}
