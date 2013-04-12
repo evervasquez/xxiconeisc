@@ -2,6 +2,7 @@ package com.ever.conesic;
 
 import com.actionbarsherlock.app.SherlockFragment;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -12,7 +13,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.util.Log;
@@ -26,6 +26,8 @@ import android.widget.Toast;
 public class terrestre extends SherlockFragment {
 
 	private GoogleMap mMap;
+	private UiSettings mUiSettings;
+	
 	 @Override
 	 public void onCreate(Bundle savedInstanceState) {
 	  super.onCreate(savedInstanceState);
@@ -80,6 +82,10 @@ public class terrestre extends SherlockFragment {
     }
     
     private void setUpMap() {
+    	mMap.setMyLocationEnabled(true);
+        mUiSettings = mMap.getUiSettings();
+        mUiSettings.setMyLocationButtonEnabled(true);
+        
     	mostrarMarcador(-6.484854474746015,-76.37905530631542,"FISI, UNSM","Population: 4,137,400");
 		mostrarMarcador(-6.487659429495001,-76.36801600456238,"Complejo UNSM","Population: 4,137,400");
 		
