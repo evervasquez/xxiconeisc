@@ -3,21 +3,28 @@
     package="com.ever.conesic"
     android:versionCode="1"
     android:versionName="1.0" >
-
-    <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="17" />
-    
     <permission
-          android:name="net.sgoliver.android.mapasapi2.permission.MAPS_RECEIVE"
-          android:protectionLevel="signature"/>
-    
-    <uses-permission android:name="net.sgoliver.android.mapasapi2.permission.MAPS_RECEIVE"/>
-    
-    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-	
+      android:name="com.example.mapdemo.permission.MAPS_RECEIVE"
+      android:protectionLevel="signature"/>
+  	<uses-permission android:name="com.example.mapdemo.permission.MAPS_RECEIVE"/>
+  	<!-- Copied from Google Maps Library/AndroidManifest.xml. -->
+  	<uses-sdk
+      android:minSdkVersion="8"
+      android:targetSdkVersion="17"/>
+  	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  	<uses-permission android:name="android.permission.INTERNET"/>
+  	<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+  	<!-- External storage for caching. -->
+  	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  	<!-- My Location -->
+  	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- Maps API needs OpenGL ES 2.0. -->
+  	<uses-feature
+      android:glEsVersion="0x00020000"
+      android:required="true"/>
+  	<!-- End of copy. -->
+  	
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -42,5 +49,4 @@
             android:label="@string/title_activity_xxiconeisc" >
         </activity>
     </application>
-
 </manifest>
