@@ -181,8 +181,8 @@ public class ActionBarView extends AbsActionBarView {
         PackageManager pm = context.getPackageManager();
         mNavigationMode = a.getInt(R.styleable.SherlockActionBar_navigationMode,
                 ActionBar.NAVIGATION_MODE_STANDARD);
-        mTitle = a.getText(R.styleable.SherlockActionBar_title);
-        mSubtitle = a.getText(R.styleable.SherlockActionBar_subtitle);
+        //mTitle = a.getText(R.styleable.SherlockActionBar_title);
+        //mSubtitle = a.getText(R.styleable.SherlockActionBar_subtitle);
 
         mLogo = a.getDrawable(R.styleable.SherlockActionBar_logo);
         if (mLogo == null) {

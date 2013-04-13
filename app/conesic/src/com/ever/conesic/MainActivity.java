@@ -146,6 +146,9 @@ public class MainActivity extends SherlockFragmentActivity implements
 		case R.id.terrestre:
 			newFragment = new terrestre();
 			break;
+		case R.id.aerea:
+			newFragment = new aerea();
+			break;
 		case R.id.turismo:
 			newFragment = new turismo();
 			break;

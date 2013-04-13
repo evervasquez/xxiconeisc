@@ -206,9 +206,9 @@
             <flag name="disableHome" value="0x20" />
         </attr>
         <!-- Specifies title text used for navigationMode="normal" -->
-        <attr name="title" format="string" />
+        <!-- <attr name="title" format="string" /> -->
         <!-- Specifies subtitle text used for navigationMode="normal" -->
-        <attr name="subtitle" format="string" />
+        <!-- <attr name="subtitle" format="string" />-->
         <!-- Specifies a style to use for title text. -->
         <attr name="titleTextStyle" />
         <!-- Specifies a style to use for subtitle text. -->
