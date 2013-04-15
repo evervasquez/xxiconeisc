@@ -10,7 +10,6 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.SpannableString;
@@ -182,7 +181,7 @@ public class terrestre extends SherlockFragment {
 		
 		return super.onOptionsItemSelected(item);
 	}*/
-    
+
     private void mostrarMarcador(double lat, double lng, String title, String snippet){
 		mMap.addMarker(new MarkerOptions().position(new LatLng(lat, lng)).title(title)
 		.snippet(snippet)

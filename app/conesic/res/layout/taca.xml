@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ui="http://schemas.android.com/apk/res/com.ever.coneisc"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffd3d3d3" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <br.com.dina.ui.widget.UIButton
+                android:id="@+id/myButton1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="10dip" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contacto" />
+
+            <br.com.dina.ui.widget.UITableView
+                android:id="@+id/tableView"
+                style="@style/UITableView" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -27,14 +27,14 @@
     <string name="conferencias">Calendario de Conferencias</string>
     <string name="visualizar">Visualizar</string>
     <string name="talleres">Calendario de Talleres</string>
-
     <string name="day_name_format">EEE</string>
-  <string name="invalid_date">Date must be between %1$s and %2$s.</string>
-  <string name="month_name_format">MMMM yyyy</string>
-  <string name="xxiconeisc">XXICONEISC</string>
-  <string name="conocenos">Conocenos</string>
-  <string name="ponentes">Ponentes</string>
-  <string name="conferencias">Conferencias</string>
-  <string name="talleres">Talleres</string>
-  <string name="concursos">Concursos</string>
+    <string name="invalid_date">Date must be between %1$s and %2$s.</string>
+    <string name="month_name_format">MMMM yyyy</string>
+    <string name="xxiconeisc">XXICONEISC</string>
+    <string name="conocenos">Conocenos</string>
+    <string name="ponentes">Ponentes</string>
+    <string name="conferencias">Conferencias</string>
+    <string name="talleres">Talleres</string>
+    <string name="concursos">Concursos</string>
+
 </resources>

@@ -13,7 +13,6 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
-import android.widget.Toast;
 
 //import android.widget.GridView;
 
@@ -116,6 +115,33 @@ public class MainActivity extends SherlockFragmentActivity implements
 			return super.onOptionsItemSelected(item);
 		}
 	}
+	
+  /*  public boolean onKeyDown(int keyCode, KeyEvent event) {
+        
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+         
+          new AlertDialog.Builder(this)
+            .setIcon(android.R.drawable.ic_dialog_alert)
+            .setTitle("Salir")
+            .setMessage("Estás seguro?")
+            .setNegativeButton(android.R.string.cancel, null)//sin listener
+            .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {//un listener que al pulsar, cierre la aplicacion
+              @Override
+              public void onClick(DialogInterface dialog, int which){
+                //Salir
+            	// onDestroy();
+                //MainActivity.this.finish();
+              }
+            })
+            .show();
+
+          // Si el listener devuelve true, significa que el evento esta procesado, y nadie debe hacer nada mas
+          return true;
+        }
+      //para las demas cosas, se reenvia el evento al listener habitual
+        return false;
+      } 
+    */
 	@Override
 	public void onClick(View v) {
 		mMenuDrawer.setActiveView(v);
