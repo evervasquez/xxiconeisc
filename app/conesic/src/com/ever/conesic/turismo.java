@@ -1,5 +1,8 @@
 package com.ever.conesic;
 import com.ever.conesic.R;
+
+import android.annotation.SuppressLint;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,10 +15,11 @@ import com.actionbarsherlock.app.SherlockFragment;
 import adaptadores.StaggeredAdapter;
 
 public class turismo extends SherlockFragment {
+	@SuppressLint("InlinedApi")
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		getSherlockActivity().getSupportActionBar().setTitle("XXICONEISC - Turismo");
+		getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
 		View root = inflater.inflate(R.layout.turismo, container, false);
 		String urls[] = { 
 				"http://farm7.staticflickr.com/6101/6853156632_6374976d38_c.jpg",

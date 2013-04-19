@@ -25,7 +25,7 @@
     <string name="portada">Portada del XXICONEISC</string>
     <string name="contenido_coneisc">El Vigésimo Primer Congreso Nacional de Estudiantes de Ingeniería de Sistemas y Computación, XXI CONEISC, es el evento de índole nacional que reúne a los estudiantes de las carreras de Ingeniería de Sistemas, Informática, Computación y afines, promovido por la Asociación Peruana de Estudiantes de ingeniería de Sistemas y Computación (APEISC); este año 2013 la organización está a cargo de la Facultad de ingeniería de Sistemas e Informática de la Universidad Nacional de San Martin de Tarapoto, a partir del día 12 al 17 de Agosto.</string>
     <string name="conferencias">Calendario de Conferencias</string>
-    <string name="visualizar">Visualizar</string>
+    <string name="visualizar">Click para visualizar Cronograma</string>
     <string name="talleres">Calendario de Talleres</string>
     <string name="day_name_format">EEE</string>
     <string name="invalid_date">Date must be between %1$s and %2$s.</string>
@@ -36,5 +36,9 @@
     <string name="conferencias">Conferencias</string>
     <string name="talleres">Talleres</string>
     <string name="concursos">Concursos</string>
+    <string name="conf">Calendario de Conferencias</string>
+    <string name="actividades">Actividades</string>
+    <string name="inversion">Inversión</string>
+    <string name="taller">Calendario de Talleres</string>
 
 </resources>

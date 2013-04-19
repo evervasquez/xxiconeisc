@@ -17,6 +17,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
+              android:id="@+id/title_u"
               android:orientation="horizontal"
               android:paddingRight="16dip"
               android:background="?attr/actionBarItemBackground"

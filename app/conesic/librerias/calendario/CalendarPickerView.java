@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -173,13 +174,16 @@ public class CalendarPickerView extends ListView {
   private class CellClickedListener implements MonthView.Listener {
     @Override public void handleClick(MonthCellDescriptor cell) {
       if (!betweenDates(cell.getDate(), minCal, maxCal)) {
-        String errMessage =
+        //String errMessage =
             getResources().getString(R.string.invalid_date, fullDateFormat.format(minCal.getTime()),
                 fullDateFormat.format(maxCal.getTime()));
-        Toast.makeText(getContext(), errMessage, Toast.LENGTH_SHORT).show();
+         
+         Toast.makeText(getContext(), ""+cell.getDate().getDate(), Toast.LENGTH_LONG).show();
+        //Toast.makeText(getContext(), errMessage, Toast.LENGTH_SHORT).show();
       } else {
         // De-select the currently-selected cell.
         selectedCell.setSelected(false);
+        
         // Select the new cell.
         selectedCell = cell;
         selectedCell.setSelected(true);
@@ -202,7 +206,8 @@ public class CalendarPickerView extends ListView {
       inflater = LayoutInflater.from(getContext());
     }
 
-    @Override public boolean isEnabled(int position) {
+    @Override 
+    public boolean isEnabled(int position) {
       // Disable selectability: each cell will handle that itself.
       return false;
     }
@@ -285,4 +290,5 @@ public class CalendarPickerView extends ListView {
   public interface OnDateSelectedListener {
     void onDateSelected(Date date);
   }
+
 }

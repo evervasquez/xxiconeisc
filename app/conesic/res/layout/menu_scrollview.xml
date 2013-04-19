@@ -11,6 +11,7 @@
 
         <TextView
             style="@style/MenuDrawer.Widget.Category"
+            android:id="@+id/favoritos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/favoritos" />
@@ -33,6 +34,7 @@
 
         <TextView
             style="@style/MenuDrawer.Widget.Category"
+            android:id="@+id/xxi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/xxiconeisc" />
@@ -60,6 +62,14 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/talleres"
             android:text="@string/talleres" />
+        
+        <TextView
+            android:id="@+id/inversion"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/inversion"
+            android:text="@string/inversion" />
 
         <TextView
             android:id="@+id/concursos"
@@ -75,10 +85,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/actividades"
-            android:text="Actividades" />
+            android:text="@string/actividades" />
 
         <TextView
             style="@style/MenuDrawer.Widget.Category"
+            android:id="@+id/comollegar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Como Llegar" />
@@ -109,6 +120,7 @@
 
         <TextView
             style="@style/MenuDrawer.Widget.Category"
+            android:id="@+id/tarapoto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tarapoto" />

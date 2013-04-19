@@ -1,11 +1,11 @@
-package aerea;
+package informacion;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.widget.ShareActionProvider;
@@ -14,6 +14,7 @@ import com.ever.mapas.mapa;
 import br.com.dina.ui.model.BasicItem;
 import br.com.dina.ui.widget.UITableView;
 import br.com.dina.ui.widget.UITableView.ClickListener;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -21,45 +22,58 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
 import android.widget.TextView;
-import android.widget.Toast;
 import utiles.paginaweb;
 import br.com.dina.ui.widget.UIButton;
 import com.ever.conesic.R;
 
-public class taca extends SherlockActivity {
+public class informacion extends SherlockFragmentActivity {
 	UITableView tableView;
 	UIButton mButton1;
 	Intent intent;
 	paginaweb pagina ;
+	String[] data;
+	int[] objetos;
+	modelo datos;
 	private static final String SHARED_FILE_NAME = "shared.png";
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		datos = (modelo)getIntent().getExtras().getParcelable("datos");
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setTheme(R.style.Theme_Sherlock_Light);
-		getSupportActionBar().setIcon(R.drawable.taca);
-		getSupportActionBar().setTitle("Taca Peru");
+	}
+	@Override
+	protected void onStart() {
+		// TODO Auto-generated method stub
+		
+		//Toast.makeText(getApplicationContext(), ""+Taca Peru, Toast.LENGTH_SHORT).show();
+		super.onRestart();
+	}
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		data = datos.getData();
+		objetos = datos.getObjeto();
+		getSupportActionBar().setIcon(objetos[0]);
+		getSupportActionBar().setTitle(data[0]);
 		setContentView(R.layout.taca);
 		
 		mButton1 = (UIButton) findViewById(R.id.myButton1);
-		
-		UIButton.setTitle("Taca Peru");
-		UIButton.setSubTitle("Aerolinea del Perú");
-		UIButton.setImage(R.drawable.tacatitle);
+		UIButton.setTitle(data[0]);
+		UIButton.setSubTitle(data[1]);
+		UIButton.setImage(objetos[1]);
 
 		//mButton3 = (UIButton) findViewById(R.id.myButton3);*/
 		tableView = (UITableView) findViewById(R.id.tableView);        
 	    createList();
 	    tableView.commit();
-
-		/*mButton2.addClickListener(listener);
-		mButton3.addClickListener(listener);*/
-	    //setContentView(R.layout.text);
-        //((TextView)findViewById(R.id.text)).setText("La Mejor Aerolinea del Peru - Taca");
+	    
+	    //((TextView)findViewById(R.id.text)).setText(R.string.share_action_providers_content);
         copyPrivateRawResuorceToPubliclyAccessibleFile();
-
+		//Log.i("datos",datos.getData().toString());
+		//Toast.makeText(getApplicationContext(), ""+Arrays.toString(datos.getData()),Toast.LENGTH_LONG).show();
+		super.onResume();
 	}
-	
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate your menu.
@@ -82,11 +96,14 @@ public class taca extends SherlockActivity {
     }
     
    
+
+	@SuppressWarnings("deprecation")
+	@SuppressLint("WorldReadableFiles")
 	private void copyPrivateRawResuorceToPubliclyAccessibleFile() {
         InputStream inputStream = null;
         FileOutputStream outputStream = null;
         try {
-            inputStream = getResources().openRawResource(R.drawable.taca);
+            inputStream = getResources().openRawResource(R.raw.robot);//edite
             outputStream = openFileOutput(SHARED_FILE_NAME,
                     Context.MODE_WORLD_READABLE | Context.MODE_APPEND);
             byte[] buffer = new byte[1024];
@@ -117,12 +134,12 @@ public class taca extends SherlockActivity {
     	CustomClickListener listener = new CustomClickListener();
     	tableView.setClickListener(listener);
     	tableView.addBasicItem(R.drawable.ubicacion,"Ubicación", "Mapa");
-    	tableView.addBasicItem(new BasicItem(R.drawable.celular,"Telefeno", "9428954114 - #245215"));
-    	tableView.addBasicItem(R.drawable.firefox,"Pagina Web", "http://www.taca.com/");
-    	tableView.addBasicItem(R.drawable.facebook,"Facebook", "https://www.facebook.com/tacaairlines");
-    	tableView.addBasicItem(R.drawable.twitter,"Twitter", "@tacaperu");
-    	tableView.addBasicItem(R.drawable.google,"Google+", "Taca Peru");
-    	tableView.addBasicItem(R.drawable.email,"Correo", "support@taca.com.pe");
+    	tableView.addBasicItem(new BasicItem(R.drawable.celular,"Telefeno", data[2]));
+    	tableView.addBasicItem(R.drawable.firefox,"Pagina Web", data[3]);
+    	tableView.addBasicItem(R.drawable.facebook,"Facebook", data[4]);
+    	tableView.addBasicItem(R.drawable.twitter,"Twitter", data[5]);
+    	tableView.addBasicItem(R.drawable.google,"Google+", data[6]);
+    	tableView.addBasicItem(R.drawable.email,"Correo", data[7]);
     	//tableView.addBasicItem("Costos", "");
     	/*tableView.addBasicItem(R.drawable.piedra,"Example 4 - UITableView", "only one item");
     	tableView.addBasicItem("Example 5 - UITableViewActivity", "a sample activity");
@@ -138,16 +155,16 @@ public class taca extends SherlockActivity {
 		public void onClick(int index) {
 			Log.d("MainActivity", "item clicked: " + index);
 			if(index == 0) {
-				Intent i = new Intent(taca.this, mapa.class);
+				Intent i = new Intent(informacion.this, mapa.class);
 				startActivity(i);
-				Toast.makeText(taca.this, ""+index, Toast.LENGTH_LONG).show();
+				
 			}
 			else if(index == 1) {
 								
 			}
 			else if(index == 2) {
 				pagina = new paginaweb();
-				pagina.paginaWeb(taca.this, "http://www.taca.com/");		
+				pagina.paginaWeb(informacion.this, "http://www.taca.com/");		
 			}
 			else if(index == 3) {
 								

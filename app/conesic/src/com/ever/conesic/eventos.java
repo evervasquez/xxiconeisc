@@ -11,7 +11,6 @@ public class eventos extends SherlockFragment {
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle saveInstanceState) {
-		getSherlockActivity().getSupportActionBar().setTitle("XXICONEISC - Eventos");
 		return inflater.inflate(R.layout.activity_eventos, container, false);
 	}
 }

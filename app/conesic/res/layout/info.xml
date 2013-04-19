@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ui="http://schemas.android.com/apk/res/com.ever.coneisc"
+    android:id="@+id/popup"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
@@ -24,7 +25,7 @@
                 android:padding="10dip" />
 
             <br.com.dina.ui.widget.UITableView
-                android:id="@+id/tableView"
+                android:id="@+id/tablapopup"
                 style="@style/UITableView" />
         </LinearLayout>
     </ScrollView>

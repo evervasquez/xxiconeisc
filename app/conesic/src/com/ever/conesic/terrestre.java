@@ -10,6 +10,9 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import android.annotation.SuppressLint;
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.SpannableString;
@@ -34,11 +37,12 @@ public class terrestre extends SherlockFragment {
 	  
 	 }
 	 
-	 @Override
+	 @SuppressLint("InlinedApi")
+	@Override
 	 public void onActivityCreated(Bundle savedInstanceState) {
 	  super.onActivityCreated(savedInstanceState);
-	  getSherlockActivity().getSupportActionBar().setTitle("XXICONEISC - Mapa");
 	  Log.v("ListFragment", "onActivityCreated().");
+	  getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
 	  Log.v("ListsavedInstanceState", savedInstanceState == null ? "true" : "false");
 	  setUpMapIfNeeded();
       mMap.setOnInfoWindowClickListener(new OnInfoWindowClickListener() {			
@@ -58,6 +62,7 @@ public class terrestre extends SherlockFragment {
 			  if (container == null) {
 			            return null;
 			        }
+			  
 			  View view = inflater.inflate(R.layout.terrestre, container, false);
 			  return view;
 			 }
@@ -183,9 +188,7 @@ public class terrestre extends SherlockFragment {
 	}*/
 
     private void mostrarMarcador(double lat, double lng, String title, String snippet){
-		mMap.addMarker(new MarkerOptions().position(new LatLng(lat, lng)).title(title)
-		.snippet(snippet)
-        .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher)));
+		mMap.addMarker(new MarkerOptions().position(new LatLng(lat, lng)).title(title).snippet(snippet).icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher)));
 	}
         
 }

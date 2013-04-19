@@ -40,15 +40,17 @@
 
         <activity
             android:name="com.ever.conesic.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:configChanges="keyboard|keyboardHidden|orientation" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="aerea.taca" android:label="@string/app_name"  />
-        <activity android:name="com.ever.mapas.mapa" android:label="@string/app_name"  />
+        <activity android:name="informacion.informacion" android:label="@string/app_name"  />
+        <activity android:name="com.ever.mapas.mapa" android:label="@string/app_name"
+            android:configChanges="keyboard|keyboardHidden|orientation"  />
     </application>
 
 </manifest>
