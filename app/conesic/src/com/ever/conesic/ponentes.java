@@ -10,7 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 import lista.datos;
 import lista.adaptador;
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.pm.ActivityInfo;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Toast;
@@ -35,7 +37,7 @@ public class ponentes extends SherlockFragment{
 	 @Override
 	 public void onActivityCreated(Bundle savedInstanceState) {
 	  super.onActivityCreated(savedInstanceState);
-	  getSherlockActivity().getSupportActionBar().setTitle("XXICONEISC - Ponentes");
+	  //getSherlockActivity().getSupportActionBar().setTitle("XXICONEISC - Ponentes");
 	  Log.v("ListFragment", "onActivityCreated().");
 	  Log.v("ListsavedInstanceState", savedInstanceState == null ? "true" : "false");
 	  
@@ -62,9 +64,11 @@ public class ponentes extends SherlockFragment{
 	   
 	 }
 	 
-	 @Override
+	 @SuppressLint("InlinedApi")
+	@Override
 	 public View onCreateView(LayoutInflater inflater, ViewGroup container,
 	   Bundle savedInstanceState) {
+	 getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
 	  Log.v("ListFragment", "onCreateView()");
 	  Log.v("ListContainer", container == null ? "true" : "false");
 	  Log.v("ListsavedInstanceState", savedInstanceState == null ? "true" : "false");

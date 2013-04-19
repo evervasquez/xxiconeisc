@@ -1,17 +1,19 @@
 package com.ever.conesic;
+import utiles.fonts;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.MenuItem;
 
 import menuslide.MenuDrawer;
-
+import android.content.res.Configuration;
 //import adaptadores.ImageAdapter;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
+import android.widget.Toast;
 
 //import android.widget.GridView;
 
@@ -22,7 +24,11 @@ public class MainActivity extends SherlockFragmentActivity implements
 	private static final String STATE_ACTIVE_VIEW_ID = "net.simonvt.menudrawer.samples.WindowSample.activeViewId";
 	private MenuDrawer mMenuDrawer;
 	private int mActiveViewId;
-
+	
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+	    super.onConfigurationChanged(newConfig);
+	}
 	@Override
 	public void onCreate(Bundle inState) {
 		setTheme(R.style.Theme_Sherlock_Light);
@@ -35,26 +41,48 @@ public class MainActivity extends SherlockFragmentActivity implements
 		mMenuDrawer.setContentView(R.layout.activity_main);
 		mMenuDrawer.setMenuView(R.layout.menu_scrollview);
 
-		// final ActionBar bar = getSupportActionBar();
-		getSupportActionBar().setTitle("CONEISCXXI");
+		fonts.cambiarfont_actionbar(this, "fonts/ArtistMedium.ttf");
+
+		getSupportActionBar().setTitle("XXICONEISC");
+			
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
 			getActionBar().setDisplayHomeAsUpEnabled(true);
 		}
+		fonts.cambiarfont(this, R.id.xxiconeisc, "fonts/ArtistMedium.ttf");
 		findViewById(R.id.xxiconeisc).setOnClickListener(this);
+		fonts.cambiarfont(this, R.id.conocenos, "fonts/ArtistMedium.ttf");
 		findViewById(R.id.conocenos).setOnClickListener(this);
+		fonts.cambiarfont(this, R.id.ponentes, "fonts/ArtistMedium.ttf");
 		findViewById(R.id.ponentes).setOnClickListener(this);
+		fonts.cambiarfont(this, R.id.conferencias, "fonts/ArtistMedium.ttf");
 		findViewById(R.id.conferencias).setOnClickListener(this);
+		fonts.cambiarfont(this, R.id.talleres, "fonts/ArtistMedium.ttf");
 		findViewById(R.id.talleres).setOnClickListener(this);
+		fonts.cambiarfont(this, R.id.concursos, "fonts/ArtistMedium.ttf");
 		findViewById(R.id.concursos).setOnClickListener(this);
+		fonts.cambiarfont(this, R.id.inversion, "fonts/ArtistMedium.ttf");
+		findViewById(R.id.inversion).setOnClickListener(this);
+		fonts.cambiarfont(this, R.id.actividades, "fonts/ArtistMedium.ttf");
 		findViewById(R.id.actividades).setOnClickListener(this);
+		fonts.cambiarfont(this, R.id.terrestre, "fonts/ArtistMedium.ttf");
 		findViewById(R.id.terrestre).setOnClickListener(this);
+		fonts.cambiarfont(this, R.id.aerea, "fonts/ArtistMedium.ttf");
 		findViewById(R.id.aerea).setOnClickListener(this);
+		fonts.cambiarfont(this, R.id.fluvial, "fonts/ArtistMedium.ttf");
 		findViewById(R.id.fluvial).setOnClickListener(this);
+		fonts.cambiarfont(this, R.id.hoteles, "fonts/ArtistMedium.ttf");
 		findViewById(R.id.hoteles).setOnClickListener(this);
+		fonts.cambiarfont(this, R.id.restaurante, "fonts/ArtistMedium.ttf");
 		findViewById(R.id.restaurante).setOnClickListener(this);
+		fonts.cambiarfont(this, R.id.turismo, "fonts/ArtistMedium.ttf");
 		findViewById(R.id.turismo).setOnClickListener(this);
-
+		
+		fonts.cambiarfont(this, R.id.favoritos, "fonts/ArtistMedium.ttf");
+		fonts.cambiarfont(this, R.id.xxi, "fonts/ArtistMedium.ttf");
+		fonts.cambiarfont(this, R.id.comollegar, "fonts/ArtistMedium.ttf");
+		fonts.cambiarfont(this, R.id.tarapoto, "fonts/ArtistMedium.ttf");
 		// This will animate the drawer open and closed until the user manually
 		// drags it. Usually this would only be
 		// called on first launch.
@@ -84,14 +112,6 @@ public class MainActivity extends SherlockFragmentActivity implements
 		outState.putInt(STATE_ACTIVE_VIEW_ID, mActiveViewId);
 	}
 
-	@Override
-	/*
-	 * public boolean onOptionsItemSelected(MenuItem item) { switch
-	 * (item.getItemId()) { case android.R.id.home: mMenuDrawer.toggleMenu();
-	 * return true; }
-	 * 
-	 * return super.onOptionsItemSelected(item); }
-	 */
 	public void onBackPressed() {
 		final int drawerState = mMenuDrawer.getDrawerState();
 		if (drawerState == MenuDrawer.STATE_OPEN
@@ -102,15 +122,24 @@ public class MainActivity extends SherlockFragmentActivity implements
 
 		super.onBackPressed();
 	}
+	
+	public boolean onOptionsItemSelected(MenuItem item) {
 
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			mMenuDrawer.openMenu();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
+	
 	@Override
 	public void onClick(View v) {
 		mMenuDrawer.setActiveView(v);
 		mMenuDrawer.closeMenu();
 		mActiveViewId = v.getId();
 		Fragment newFragment = null;
-		FragmentActivity map = null;
-		String mapa = null;
 		FragmentTransaction transaccion = getSupportFragmentManager()
 				.beginTransaction();
 
@@ -130,8 +159,36 @@ public class MainActivity extends SherlockFragmentActivity implements
 		case R.id.talleres:
 			newFragment = new talleres();
 			break;
+		case R.id.inversion:
+			newFragment = new inversion();
+			break;
+		case R.id.concursos:
+			Toast.makeText(getApplicationContext(), "Pagina en Construcción", Toast.LENGTH_LONG).show();
+			newFragment = new Xxiconeisc();
+			break;
+		case R.id.actividades:
+			Toast.makeText(getApplicationContext(), "Pagina en Construcción", Toast.LENGTH_LONG).show();
+			newFragment = new Xxiconeisc();
+			break;
 		case R.id.terrestre:
-			newFragment = new terrestre();
+			//newFragment = new terrestre();
+			Toast.makeText(getApplicationContext(), "Pagina en Construcción", Toast.LENGTH_LONG).show();
+			newFragment = new Xxiconeisc();
+			break;
+		case R.id.aerea:
+			newFragment = new aerea();
+			break;
+		case R.id.fluvial:
+			Toast.makeText(getApplicationContext(), "Pagina en Construcción", Toast.LENGTH_LONG).show();
+			newFragment = new Xxiconeisc();
+			break;
+		case R.id.hoteles:
+			Toast.makeText(getApplicationContext(), "Pagina en Construcción", Toast.LENGTH_LONG).show();
+			newFragment = new Xxiconeisc();
+			break;
+		case R.id.restaurante:
+			Toast.makeText(getApplicationContext(), "Pagina en Construcción", Toast.LENGTH_LONG).show();
+			newFragment = new Xxiconeisc();
 			break;
 		case R.id.turismo:
 			newFragment = new turismo();

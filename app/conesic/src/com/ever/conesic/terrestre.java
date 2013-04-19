@@ -2,6 +2,7 @@ package com.ever.conesic;
 
 import com.actionbarsherlock.app.SherlockFragment;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -10,9 +11,10 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import android.annotation.SuppressLint;
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.util.Log;
@@ -26,6 +28,8 @@ import android.widget.Toast;
 public class terrestre extends SherlockFragment {
 
 	private GoogleMap mMap;
+	private UiSettings mUiSettings;
+	
 	 @Override
 	 public void onCreate(Bundle savedInstanceState) {
 	  super.onCreate(savedInstanceState);
@@ -33,11 +37,12 @@ public class terrestre extends SherlockFragment {
 	  
 	 }
 	 
-	 @Override
+	 @SuppressLint("InlinedApi")
+	@Override
 	 public void onActivityCreated(Bundle savedInstanceState) {
 	  super.onActivityCreated(savedInstanceState);
-	  getSherlockActivity().getSupportActionBar().setTitle("XXICONEISC - Ponentes");
 	  Log.v("ListFragment", "onActivityCreated().");
+	  getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
 	  Log.v("ListsavedInstanceState", savedInstanceState == null ? "true" : "false");
 	  setUpMapIfNeeded();
       mMap.setOnInfoWindowClickListener(new OnInfoWindowClickListener() {			
@@ -57,6 +62,7 @@ public class terrestre extends SherlockFragment {
 			  if (container == null) {
 			            return null;
 			        }
+			  
 			  View view = inflater.inflate(R.layout.terrestre, container, false);
 			  return view;
 			 }
@@ -71,7 +77,7 @@ public class terrestre extends SherlockFragment {
         // Do a null check to confirm that we have not already instantiated the map.
         if (mMap == null) {
             // Try to obtain the map from the SupportMapFragment.
-            mMap = ((SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map)).getMap();
+            mMap = ((SupportMapFragment) getSherlockActivity().getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
             // Check if we were successful in obtaining the map.
             if (mMap != null) {
                 setUpMap();
@@ -80,6 +86,10 @@ public class terrestre extends SherlockFragment {
     }
     
     private void setUpMap() {
+    	mMap.setMyLocationEnabled(true);
+        mUiSettings = mMap.getUiSettings();
+        mUiSettings.setMyLocationButtonEnabled(true);
+        
     	mostrarMarcador(-6.484854474746015,-76.37905530631542,"FISI, UNSM","Population: 4,137,400");
 		mostrarMarcador(-6.487659429495001,-76.36801600456238,"Complejo UNSM","Population: 4,137,400");
 		
@@ -176,13 +186,9 @@ public class terrestre extends SherlockFragment {
 		
 		return super.onOptionsItemSelected(item);
 	}*/
-    
+
     private void mostrarMarcador(double lat, double lng, String title, String snippet){
-		mMap.addMarker(new MarkerOptions()
-		.position(new LatLng(lat, lng))
-		.title(title)
-		.snippet(snippet)
-        .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher)));
+		mMap.addMarker(new MarkerOptions().position(new LatLng(lat, lng)).title(title).snippet(snippet).icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher)));
 	}
         
 }

@@ -7,10 +7,13 @@
     android:layout_height="match_parent"
     >
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/txttalleres"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/talleres" />
+        android:layout_margin="8dp"
+        android:gravity="center_horizontal"
+        android:textSize="15sp"
+        android:text="@string/taller" />
     
   <calendario.CalendarPickerView
       android:id="@+id/talleresView"

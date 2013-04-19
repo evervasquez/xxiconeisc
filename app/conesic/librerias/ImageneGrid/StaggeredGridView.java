@@ -135,7 +135,6 @@ public class StaggeredGridView extends ViewGroup {
     private int mActivePointerId;
     private int mMotionPosition;
     private int mColWidth;
-    private int mNumCols;
     private long mFirstAdapterId;
     private boolean mBeginClick;
     
