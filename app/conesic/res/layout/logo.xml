@@ -27,7 +27,8 @@
 	        android:layout_height="wrap_content"
 	        android:contentDescription="@string/logounsm"
 		    android:paddingRight="@dimen/activity_horizontal_padding" 
-	        android:src="@drawable/logounsm" />
+	        android:src="@drawable/logounsm"
+	        android:onClick="" />
 
 	    <ImageView
 	        android:id="@+id/imageView3"
@@ -36,7 +37,8 @@
 	        android:contentDescription="@string/logofisi"
 		    android:paddingLeft="@dimen/activity_horizontal_padding"
 		    android:paddingRight="@dimen/activity_horizontal_padding" 
-	        android:src="@drawable/logofisi" />
+	        android:src="@drawable/logofisi"
+	        android:onClick="" />
 
 	    <ImageView
 	        android:id="@+id/imageView4"
@@ -44,7 +46,8 @@
 	        android:layout_height="wrap_content"
 	        android:contentDescription="@string/logoapeisc"
 		    android:paddingLeft="@dimen/activity_horizontal_padding"
-	        android:src="@drawable/logoapeisc" />
+	        android:src="@drawable/logoapeisc"
+	        android:onClick="" />
 
     </LinearLayout>
 
