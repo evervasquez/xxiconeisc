@@ -18,8 +18,8 @@
     <LinearLayout
         android:id="@+id/layout1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center" >
+        android:layout_height="wrap_content"
+        android:gravity="center">
 
 	    <ImageView
 	        android:id="@+id/imageView2"
@@ -27,8 +27,7 @@
 	        android:layout_height="wrap_content"
 	        android:contentDescription="@string/logounsm"
 		    android:paddingRight="@dimen/activity_horizontal_padding" 
-	        android:src="@drawable/logounsm"
-	        android:onClick="" />
+	        android:src="@drawable/logounsm"/>
 
 	    <ImageView
 	        android:id="@+id/imageView3"
@@ -37,8 +36,7 @@
 	        android:contentDescription="@string/logofisi"
 		    android:paddingLeft="@dimen/activity_horizontal_padding"
 		    android:paddingRight="@dimen/activity_horizontal_padding" 
-	        android:src="@drawable/logofisi"
-	        android:onClick="" />
+	        android:src="@drawable/logofisi"/>
 
 	    <ImageView
 	        android:id="@+id/imageView4"
@@ -46,8 +44,7 @@
 	        android:layout_height="wrap_content"
 	        android:contentDescription="@string/logoapeisc"
 		    android:paddingLeft="@dimen/activity_horizontal_padding"
-	        android:src="@drawable/logoapeisc"
-	        android:onClick="" />
+	        android:src="@drawable/logoapeisc"/>
 
     </LinearLayout>
 
