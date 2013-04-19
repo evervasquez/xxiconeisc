@@ -1,18 +1,37 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradiente"
+    android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:layout_gravity="top"
     tools:context=".Xxiconeisc" >
 
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:contentDescription="@string/portada"
         android:src="@drawable/portada" />
 
-</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/LblEtiqueta"
+            android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+            android:text="El Vigésimo Primer Congreso Nacional de Estudiantes de Ingeniería de Sistemas y Computación, XXI CONEISC, es el evento de índole nacional que reúne a los estudiantes de las carreras de Ingeniería de Sistemas, Informática, Computación y afines, promovido por la Asociación Peruana de Estudiantes de ingeniería de Sistemas y Computación (APEISC); este año 2013 la organización está a cargo de la Facultad de ingeniería de Sistemas e Informática de la Universidad Nacional de San Martin de Tarapoto, a partir del día 12 al 17 de Agosto."
+            android:typeface="serif"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@color/blanco"
+            />
+	
+	</LinearLayout>
+
+</LinearLayout>
