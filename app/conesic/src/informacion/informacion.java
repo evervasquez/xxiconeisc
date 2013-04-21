@@ -21,7 +21,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
-import android.widget.TextView;
 import utiles.paginaweb;
 import br.com.dina.ui.widget.UIButton;
 import com.ever.conesic.R;
@@ -33,6 +32,7 @@ public class informacion extends SherlockFragmentActivity {
 	paginaweb pagina ;
 	String[] data;
 	int[] objetos;
+	double[] coordenadas;
 	modelo datos;
 	private static final String SHARED_FILE_NAME = "shared.png";
 	@Override
@@ -54,6 +54,7 @@ public class informacion extends SherlockFragmentActivity {
 		// TODO Auto-generated method stub
 		data = datos.getData();
 		objetos = datos.getObjeto();
+		coordenadas = datos.getCoordenadas();
 		getSupportActionBar().setIcon(objetos[0]);
 		getSupportActionBar().setTitle(data[0]);
 		setContentView(R.layout.taca);
@@ -103,9 +104,9 @@ public class informacion extends SherlockFragmentActivity {
         InputStream inputStream = null;
         FileOutputStream outputStream = null;
         try {
-            inputStream = getResources().openRawResource(R.raw.robot);//edite
+            inputStream = getResources().openRawResource(objetos[2]);//edite
             outputStream = openFileOutput(SHARED_FILE_NAME,
-                    Context.MODE_WORLD_READABLE | Context.MODE_APPEND);
+                    Context.MODE_WORLD_READABLE );
             byte[] buffer = new byte[1024];
             int length = 0;
             try {
@@ -156,6 +157,7 @@ public class informacion extends SherlockFragmentActivity {
 			Log.d("MainActivity", "item clicked: " + index);
 			if(index == 0) {
 				Intent i = new Intent(informacion.this, mapa.class);
+				i.putExtra("coordenadas", coordenadas);
 				startActivity(i);
 				
 			}

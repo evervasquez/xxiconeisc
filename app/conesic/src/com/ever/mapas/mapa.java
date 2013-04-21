@@ -15,6 +15,7 @@
  * 
  */
 package com.ever.mapas;
+
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -41,7 +42,7 @@ public class mapa extends FragmentActivity {
 
 	SupportGoogleMap mGoogleMap;
 	SupportMarker mMarker;
-	 
+	double[] coordenadas;
 	@Override
 	public void onConfigurationChanged(Configuration newConfig) {
 	    super.onConfigurationChanged(newConfig);
@@ -49,40 +50,41 @@ public class mapa extends FragmentActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
+	    coordenadas = getIntent().getDoubleArrayExtra("coordenadas");
+	    //Toast.makeText(getApplicationContext(), ""+Arrays.toString(coordenadas), Toast.LENGTH_LONG).show();
 	    setContentView(R.layout.mapa1);
-	    
-	    // Get an instance of the SupportGoogleMap
-	    try {
-			mGoogleMap = SupportGoogleMap.newInstance(getApplicationContext(), 
-					(SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map));
-			mMarker = mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(-6.513434965802698,-76.37042999267578)).title("Taca Peru").snippet("Aereopuerto Tarapoto"));
-			//mGoogleMap.moveCamera(CameraUpdateFactory.newLatLng(mMarker.getMarker().getPosition()));
-			mGoogleMap.setInitialCameraPosition(mMarker.getMarker().getPosition());
-			mGoogleMap.setMyLocationEnabled(true);
-			mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(-6.513434965802698,-76.37042999267578), 2));
-	    } catch (NoPlayServicesFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 	
 	@Override
 	protected void onStart() {
-		// TODO Auto-generated method stub
-		//Toast.makeText(getApplicationContext(), ""+mGoogleMap.getMapType(), Toast.LENGTH_SHORT).show();
-		//mGoogleMap.setMapType(2);
-		
+	    try {
+			mGoogleMap = SupportGoogleMap.newInstance(getApplicationContext(), 
+					(SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map));
+			mMarker = mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(coordenadas[0],coordenadas[1])).title("Taca Peru").snippet("Aereopuerto Tarapoto"));
+			//mGoogleMap.moveCamera(CameraUpdateFactory.newLatLng(mMarker.getMarker().getPosition()));
+			mGoogleMap.setInitialCameraPosition(mMarker.getMarker().getPosition());
+			mGoogleMap.setMyLocationEnabled(true);
+			mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(coordenadas[0],coordenadas[1]), 2));
+	    } catch (NoPlayServicesFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		super.onStart();
 	}
 	@Override
 	protected void onResume() {
 		// TODO Auto-generated method stub
-		mGoogleMap.animateTo(new LatLng(-6.513434965802698,-76.37042999267578));
+		mGoogleMap.animateTo(new LatLng(coordenadas[0],coordenadas[1]));
 		//mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(-6.513434965802698,-76.37042999267578), 13));
 		mGoogleMap.animateCamera(CameraUpdateFactory.zoomTo(13),2000,null);
 		mGoogleMap.setInfoWindowAdapter(new CustomInfoWindowAdapter());
 		super.onResume();
 		
+	}
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
 	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

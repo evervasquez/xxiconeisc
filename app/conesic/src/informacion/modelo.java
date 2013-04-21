@@ -7,15 +7,17 @@ public class modelo implements Parcelable {
 
 	private String[] data;
 	private int[] objetos;
-
+	private double[] coordenadas;
 	public modelo() {
 		objetos = new int[3];
 		data = new String[8];
+		coordenadas = new double[2];
 	}
 
 	public modelo(Parcel in) {
 		objetos = new int[3];
 		data = new String[8];
+		coordenadas = new double[2];
 		readFromParcel(in);
 	}
 
@@ -26,7 +28,9 @@ public class modelo implements Parcelable {
 	public void setObjeto(int[] objeto) {
 		this.objetos = objeto;
 	}
-
+	public void setCoordenadas(double[] coordenadas){
+		this.coordenadas = coordenadas;
+	}
 	public String[] getData() {
 		return this.data;
 	}
@@ -34,7 +38,9 @@ public class modelo implements Parcelable {
 	public int[] getObjeto() {
 		return this.objetos;
 	}
-
+	public double[] getCoordenadas(){
+		return this.coordenadas;
+	}
 	public static final Parcelable.Creator<modelo> CREATOR = new Parcelable.Creator<modelo>() {
 		public modelo createFromParcel(Parcel in) {
 			return new modelo(in);
@@ -56,11 +62,13 @@ public class modelo implements Parcelable {
 		// TODO Auto-generated method stub
 		dest.writeStringArray(data);
 		dest.writeIntArray(objetos);
+		dest.writeDoubleArray(coordenadas);
 	}
 
 	private void readFromParcel(Parcel in) {
 		in.readStringArray(data);
 		in.readIntArray(objetos);
+		in.readDoubleArray(coordenadas);
 	}
 
 }

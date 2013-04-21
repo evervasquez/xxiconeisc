@@ -18,13 +18,13 @@ public class fonts {
 		Typeface font = Typeface.createFromAsset(actividad.getAssets(), fonts);
 		custom.setTypeface(font);
 	}
-	
+	//metodo para fragmentos
 	public static void cambiarfont(Activity actividad,View view,int textview, String fonts){
 		TextView custom = (TextView) view.findViewById(textview);
 		Typeface font = Typeface.createFromAsset(actividad.getAssets(), fonts);
 		custom.setTypeface(font);
 	}
-	
+	//
 	public static void cambiarfont(Activity actividad,int textview, String fonts){
 		TextView custom = (TextView) actividad.findViewById(textview);
 		Typeface font = Typeface.createFromAsset(actividad.getAssets(), fonts);

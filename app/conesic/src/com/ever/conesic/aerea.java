@@ -20,6 +20,7 @@ public class aerea extends SherlockFragment {
 	private Intent i;
 	private String[] data;
 	private int[] objeto;
+	private double[] coordenadas;
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -80,9 +81,11 @@ public class aerea extends SherlockFragment {
 				// imagenes = icono, img_lista,img_compartir
 				objeto = new int[] { R.drawable.taca, R.drawable.tacatitle,
 						R.drawable.taca };
+				coordenadas = new double[]{-6.513434965802698,-76.37042999267578};
 				datos = new modelo();
 				datos.setData(data);
 				datos.setObjeto(objeto);
+				datos.setCoordenadas(coordenadas);
 				i.putExtra("datos", datos);
 				startActivity(i);
 				break;
@@ -95,13 +98,16 @@ public class aerea extends SherlockFragment {
 				// imagenes = icono, img_lista,img_compartir
 				objeto = new int[] { R.drawable.lan, R.drawable.lantitle,
 						R.drawable.lan };
+				coordenadas = new double[]{-6.484839816984237,-76.37924909591675};
 				datos = new modelo();
 				datos.setData(data);
 				datos.setObjeto(objeto);
+				datos.setCoordenadas(coordenadas);
 				i.putExtra("datos", datos);
 				startActivity(i);
 				break;
 			case 2:
+				//data para armar la vista
 				data = new String[] { "StarPeru", "Aerolinea del Peru",
 						"9428954114 - #245215", "http://www.starperu.com/",
 						"https://www.facebook.com/aerolineas.starperu", "@starperu_",
@@ -110,9 +116,12 @@ public class aerea extends SherlockFragment {
 				// imagenes = icono, img_lista,img_compartir
 				objeto = new int[] { R.drawable.starperu, R.drawable.starperutitle,
 						R.drawable.starperu };
+				//enviamos las coordenadas para el mapa
+				coordenadas = new double[]{-8.080347350210397,-79.02695417404175};
 				datos = new modelo();
 				datos.setData(data);
 				datos.setObjeto(objeto);
+				datos.setCoordenadas(coordenadas);
 				i.putExtra("datos", datos);
 				startActivity(i);
 				break;
