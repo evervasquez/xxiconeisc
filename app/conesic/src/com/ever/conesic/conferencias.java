@@ -8,6 +8,7 @@ import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.Toast;
 import br.com.dina.ui.widget.UIButton;
 import br.com.dina.ui.widget.UITableView;
 import calendario.CalendarPickerView;
@@ -29,12 +31,12 @@ public class conferencias extends SherlockFragment {
 	Point p;
 	UITableView tableView;
 	String[] titulos, subtitulos;
-
+	int largo;
+	int ancho;
 	private static final String TAG = "SampleTimesSquareActivity";
 
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		
 	}
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -44,8 +46,7 @@ public class conferencias extends SherlockFragment {
 
 		fecha = new fechas();
 		View root = inflater.inflate(R.layout.conferencias, container, false);
-		final CalendarPickerView calendar = (CalendarPickerView) root
-				.findViewById(R.id.conferenciasView);
+		final CalendarPickerView calendar = (CalendarPickerView) root.findViewById(R.id.conferenciasView);
 
 		calendar.init(fecha.retornaFecha(2013, 7, 12),
 				fecha.retornaFecha(2013, 7, 1), fecha.retornaFecha(2013, 7, 31));
@@ -56,12 +57,12 @@ public class conferencias extends SherlockFragment {
 					public void onClick(View view) {
 						Log.d(TAG, "Selected time in millis: "
 								+ calendar.getSelectedDate().getTime());
-		
+
 						switch (calendar.getSelectedDate().getDate()) {
 						case 12:
-							titulos = new String[] { "Programaci髇",
+							titulos = new String[] { "Programaci贸n",
 									"Entrega de Materiales",
-									"Inauguraci髇 XXICONEISC",
+									"Inauguraci贸n XXICONEISC",
 									"Conferencia Internacional 1",
 									"Noches de Confraternidad" };
 							subtitulos = new String[] { "Lunes 12 de Agosto",
@@ -70,10 +71,10 @@ public class conferencias extends SherlockFragment {
 							showPopup(getActivity(), p, titulos, subtitulos);
 							break;
 						case 13:
-							titulos = new String[] { "Programaci髇",
+							titulos = new String[] { "Programaci贸n",
 									"Conferencia Nacional 1",
 									"Conferencia Internacional 2",
-									"Feria Tegnol骻ica",
+									"Feria Tegnol贸gica",
 									"Concurso de Proy. Cientifico",
 									"Conferencia Nacional 2",
 									"Conferencia Internacional 3",
@@ -85,10 +86,10 @@ public class conferencias extends SherlockFragment {
 							showPopup(getActivity(), p, titulos, subtitulos);
 							break;
 						case 14:
-							titulos = new String[] { "Programaci髇",
+							titulos = new String[] { "Programaci贸n",
 									"Conferencia Nacional 3",
 									"Conferencia Internacional 4",
-									"Feria Tegnol骻ica",
+									"Feria Tegnol贸gica",
 									"Concurso de Proy. Cientifico",
 									"Conferencia Internacional 5",
 									"Conferencia Internacional 6",
@@ -100,10 +101,10 @@ public class conferencias extends SherlockFragment {
 							showPopup(getActivity(), p, titulos, subtitulos);
 							break;
 						case 15:
-							titulos = new String[] { "Programaci髇",
+							titulos = new String[] { "Programaci贸n",
 									"Conferencia Nacional 4",
 									"Conferencia Internacional 7",
-									"Feria Tegnol骻ica",
+									"Feria Tegnol贸gica",
 									"Concurso de Proy. Cientifico",
 									"Conferencia Nacional 5",
 									"Conferencia Internacional 8",
@@ -115,10 +116,10 @@ public class conferencias extends SherlockFragment {
 							showPopup(getActivity(), p, titulos, subtitulos);
 							break;
 						case 16:
-							titulos = new String[] { "Programaci髇",
+							titulos = new String[] { "Programaci贸n",
 									"Conferencia Nacional 6",
 									"Conferencia Internacional 9",
-									"Feria Tegnol骻ica",
+									"Feria Tegnol贸gica",
 									"Concurso de Proy. Cientifico",
 									"Conferencia Nacional 7",
 									"Conferencia Internacional 10",
@@ -130,10 +131,10 @@ public class conferencias extends SherlockFragment {
 							showPopup(getActivity(), p, titulos, subtitulos);
 							break;
 						case 17:
-							titulos = new String[] { "Programaci髇",
+							titulos = new String[] { "Programaci贸n",
 									"MegaTours" };
 							subtitulos = new String[] { "Sabado 17 de Agosto",
-									"Todo el d韆" };
+									"Todo el d铆a" };
 							showPopup(getActivity(), p, titulos, subtitulos);
 							break;
 						default:
@@ -143,6 +144,13 @@ public class conferencias extends SherlockFragment {
 				});
 		fonts.cambiarfont(getActivity(), root, R.id.conf,
 				"fonts/ArtistMedium.ttf");
+		
+		//obtenemos medidas de la pantalla en pixeles
+		Display display = getActivity().getWindowManager().getDefaultDisplay();
+		largo = display.getWidth();
+		ancho = display.getHeight();
+		
+
 		return root;
 	}
 
@@ -162,10 +170,11 @@ public class conferencias extends SherlockFragment {
 		p = new Point();
 		p.x = location[0];
 		p.y = location[1];
+		
+		int popupWidth = largo;
+		int popupHeight = ancho;
 
-		int popupWidth = 290;
-		int popupHeight = 370;
-
+		Toast.makeText(getSherlockActivity(), "el largo es " + popupWidth, Toast.LENGTH_SHORT).show();
 		// Inflate the popup_layout.xml
 		LinearLayout viewGroup = (LinearLayout) context
 				.findViewById(R.id.popup);
