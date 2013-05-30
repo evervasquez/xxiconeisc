@@ -254,6 +254,12 @@ public class CalendarPickerView extends ListView {
         boolean isSelectable = isCurrentMonth && betweenDates(cal, minCal, maxCal);
         boolean isToday = sameDate(cal, today);
         int value = cal.get(DAY_OF_MONTH);
+        
+        //para bloquear antes del 12 y despues del 17
+        if(value<12 || value>17 ){
+        	isCurrentMonth = false;
+        }
+        //fin
         MonthCellDescriptor cell =
             new MonthCellDescriptor(date, isCurrentMonth, isSelectable, isSelected, isToday, value);
         if (isSelected) {

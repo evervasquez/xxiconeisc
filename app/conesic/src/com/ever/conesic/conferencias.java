@@ -1,6 +1,7 @@
 package com.ever.conesic;
 
-import br.com.dina.ui.model.BasicItem;
+import utiles.fechas;
+import utiles.fonts;
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
@@ -12,19 +13,16 @@ import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
-import android.widget.Toast;
+import br.com.dina.ui.model.BasicItem;
 import br.com.dina.ui.widget.UIButton;
 import br.com.dina.ui.widget.UITableView;
 import calendario.CalendarPickerView;
 
 import com.actionbarsherlock.app.SherlockFragment;
-
-import utiles.fechas;
-import utiles.fonts;
 
 public class conferencias extends SherlockFragment {
 	fechas fecha;
@@ -39,6 +37,7 @@ public class conferencias extends SherlockFragment {
 		super.onActivityCreated(savedInstanceState);
 	}
 
+	@SuppressWarnings("deprecation")
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		getActivity().setRequestedOrientation(
@@ -52,7 +51,6 @@ public class conferencias extends SherlockFragment {
 				fecha.retornaFecha(2013, 7, 1), fecha.retornaFecha(2013, 7, 31));
 		root.findViewById(R.id.done_button).setOnClickListener(
 				new OnClickListener() {
-					@SuppressWarnings("deprecation")
 					@Override
 					public void onClick(View view) {
 						Log.d(TAG, "Selected time in millis: "
@@ -147,8 +145,8 @@ public class conferencias extends SherlockFragment {
 		
 		//obtenemos medidas de la pantalla en pixeles
 		Display display = getActivity().getWindowManager().getDefaultDisplay();
-		largo = display.getWidth();
-		ancho = display.getHeight();
+		largo = (int) (display.getWidth()* 0.9);
+		ancho = (int) (display.getHeight()*0.8);
 		
 
 		return root;
@@ -174,7 +172,6 @@ public class conferencias extends SherlockFragment {
 		int popupWidth = largo;
 		int popupHeight = ancho;
 
-		Toast.makeText(getSherlockActivity(), "el largo es " + popupWidth, Toast.LENGTH_SHORT).show();
 		// Inflate the popup_layout.xml
 		LinearLayout viewGroup = (LinearLayout) context
 				.findViewById(R.id.popup);

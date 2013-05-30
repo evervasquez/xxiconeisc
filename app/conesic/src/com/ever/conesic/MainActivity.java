@@ -3,8 +3,9 @@ import utiles.fonts;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.MenuItem;
-
+import utiles.paginaweb;
 import menuslide.MenuDrawer;
+import android.annotation.SuppressLint;
 import android.content.res.Configuration;
 //import adaptadores.ImageAdapter;
 import android.os.Build;
@@ -29,7 +30,7 @@ public class MainActivity extends SherlockFragmentActivity implements
 	public void onConfigurationChanged(Configuration newConfig) {
 	    super.onConfigurationChanged(newConfig);
 	}
-	@Override
+	@SuppressLint("NewApi") @Override
 	public void onCreate(Bundle inState) {
 		setTheme(R.style.Theme_Sherlock_Light);
 		super.onCreate(inState);
@@ -139,17 +140,21 @@ public class MainActivity extends SherlockFragmentActivity implements
 		mMenuDrawer.setActiveView(v);
 		mMenuDrawer.closeMenu();
 		mActiveViewId = v.getId();
+		paginaweb pagina;
 		Fragment newFragment = null;
 		FragmentTransaction transaccion = getSupportFragmentManager()
 				.beginTransaction();
 
 		switch (mActiveViewId) {
 		case R.id.xxiconeisc:
-			newFragment = new Xxiconeisc();
-			break;
+			//newFragment = new Xxiconeisc();
+			pagina = new paginaweb();
+			pagina.paginaWeb(this, "http://coneisc.pe/");
+			return;
 		case R.id.conocenos:
-			newFragment = new eventos();
-			break;
+			pagina = new paginaweb();
+			pagina.paginaWeb(this, "http://coneisc.pe/web/presentacion");
+			return;
 		case R.id.ponentes:
 			newFragment = new ponentes();
 			break;
@@ -163,31 +168,30 @@ public class MainActivity extends SherlockFragmentActivity implements
 			newFragment = new inversion();
 			break;
 		case R.id.concursos:
-			Toast.makeText(getApplicationContext(), "Pagina en Construcción", Toast.LENGTH_LONG).show();
-			newFragment = new Xxiconeisc();
+			newFragment = new concursos();
 			break;
 		case R.id.actividades:
-			Toast.makeText(getApplicationContext(), "Pagina en Construcción", Toast.LENGTH_LONG).show();
+			Toast.makeText(getApplicationContext(), "Pagina en Construcciï¿½n", Toast.LENGTH_LONG).show();
 			newFragment = new Xxiconeisc();
 			break;
 		case R.id.terrestre:
 			//newFragment = new terrestre();
-			Toast.makeText(getApplicationContext(), "Pagina en Construcción", Toast.LENGTH_LONG).show();
+			Toast.makeText(getApplicationContext(), "Pagina en Construcciï¿½n", Toast.LENGTH_LONG).show();
 			newFragment = new Xxiconeisc();
 			break;
 		case R.id.aerea:
 			newFragment = new aerea();
 			break;
 		case R.id.fluvial:
-			Toast.makeText(getApplicationContext(), "Pagina en Construcción", Toast.LENGTH_LONG).show();
+			Toast.makeText(getApplicationContext(), "Pagina en Construcciï¿½n", Toast.LENGTH_LONG).show();
 			newFragment = new Xxiconeisc();
 			break;
 		case R.id.hoteles:
-			Toast.makeText(getApplicationContext(), "Pagina en Construcción", Toast.LENGTH_LONG).show();
+			Toast.makeText(getApplicationContext(), "Pagina en Construcciï¿½n", Toast.LENGTH_LONG).show();
 			newFragment = new Xxiconeisc();
 			break;
 		case R.id.restaurante:
-			Toast.makeText(getApplicationContext(), "Pagina en Construcción", Toast.LENGTH_LONG).show();
+			Toast.makeText(getApplicationContext(), "Pagina en Construcciï¿½n", Toast.LENGTH_LONG).show();
 			newFragment = new Xxiconeisc();
 			break;
 		case R.id.turismo:
