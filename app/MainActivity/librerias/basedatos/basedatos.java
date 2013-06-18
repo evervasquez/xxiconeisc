@@ -151,15 +151,15 @@ public class basedatos {
 		return nBD.insert(N_TABLA, null, newValues);
 	}
 */
-	public String seleccionar() {
+/*	public String seleccionarCategoria() {
 		// TODO Auto-generated method stub
 		String resultado = "";
-		String[] columna = new String[] { ID_FILA, ID_RANGO, ID_CATEGORIA,ID_COSTO_S,ID_COSTO_D, ID_COSTO_T, ID_COSTO_M, ID_COSTO_C, ID_COSTO_CX, ID_TELEFONO, ID_DIRECCION, ID_IMAGEN, ID_LATITUD, ID_LONGITUD };
+		String[] columna = new String[] { ID_CATEGORIA};
 		Cursor c = nBD.query(N_TABLA, columna, null, null, null, null, null);
 
 		int iFila = c.getColumnIndex(ID_FILA);
-		int iestado = c.getColumnIndex(ID_ESTADO);
-		int iveces = c.getColumnIndex(ID_VECES);
+		//int iestado = c.getColumnIndex(ID_ESTADO);
+		//int iveces = c.getColumnIndex(ID_VECES);
 		// resultado = new int[3];
 		for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()) {
 			resultado = c.getInt(iFila) + " - " + c.getInt(iestado) + " - "

@@ -3,7 +3,14 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"  
     android:layout_height="fill_parent">	
-   <TextView  android:text="@string/lista_ponentes"/>
+   <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center_horizontal"
+        android:textSize="15dp"
+        android:text="@string/lista_ponentes" />
 	<ScrollView
 		android:id="@+id/scrollView" 
 		android:layout_width="fill_parent" 
