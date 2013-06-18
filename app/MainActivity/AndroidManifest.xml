@@ -51,6 +51,7 @@
         <activity android:name="informacion.informacion" android:label="@string/app_name"  />
         <activity android:name="informacion.info_concursos" android:label="@string/app_name"  android:theme="@android:style/Theme.NoTitleBar"/>
         <activity android:name="informacion.info_ponentes" android:label="@string/app_name"  android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name="informacion.info_hospedajes" android:label="@string/app_name"  android:theme="@android:style/Theme.NoTitleBar"/>
         <activity 
             android:name="informacion.deportivo" 
             android:label="@string/app_name" 

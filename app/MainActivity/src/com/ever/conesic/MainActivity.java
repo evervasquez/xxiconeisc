@@ -186,8 +186,7 @@ public class MainActivity extends SherlockFragmentActivity implements
 			newFragment = new Xxiconeisc();
 			break;
 		case R.id.hoteles:
-			Toast.makeText(getApplicationContext(), "Pagina en Construcci�n", Toast.LENGTH_LONG).show();
-			newFragment = new Xxiconeisc();
+			newFragment = new hoteles();
 			break;
 		case R.id.restaurante:
 			Toast.makeText(getApplicationContext(), "Pagina en Construcci�n", Toast.LENGTH_LONG).show();

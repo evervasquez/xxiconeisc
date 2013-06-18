@@ -136,15 +136,6 @@ public class info_concursos extends SherlockFragmentActivity {
     	tableView.addBasicItem(new BasicItem(R.drawable.pdf,"Bases de Concurso", "Descargar"));
     	tableView.addBasicItem(R.drawable.calendario,"Fechas Importantes", data[3]);
     	tableView.addBasicItem(R.drawable.firefox,"Coneisc Web", data[4]);
-    	//tableView.addBasicItem(R.drawable.twitter,"Twitter", data[5]);
-    	//tableView.addBasicItem(R.drawable.google,"Google+", data[6]);
-    	//tableView.addBasicItem(R.drawable.email,"Correo", data[7]);
-    	//tableView.addBasicItem("Costos", "");
-    	/*tableView.addBasicItem(R.drawable.piedra,"Example 4 - UITableView", "only one item");
-    	tableView.addBasicItem("Example 5 - UITableViewActivity", "a sample activity");
-    	tableView.addBasicItem("Example 6 - UITableViewActivity temp", "item with custom view");
-    	tableView.addBasicItem("Example 7 - UIButton", "some floating buttons");
-    	tableView.addBasicItem("Example 8 - Clear List", "this button will clear the list");*/
     	
     }
     

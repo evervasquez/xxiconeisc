@@ -1,6 +1,5 @@
 package com.ever.conesic;
 
-import informacion.concursos_model;
 import informacion.deportivo;
 import informacion.gastronomica;
 import informacion.megatours;
@@ -17,10 +16,7 @@ import com.actionbarsherlock.app.SherlockFragment;
 
 public class actividades extends SherlockFragment {
 	UITableView tableView;
-	concursos_model datos;
-	int[] objeto;
 	Intent i;
-	String[] data;
 	
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -52,19 +48,6 @@ public class actividades extends SherlockFragment {
 		tableView.addBasicItem("Campeonato Deportivo", "");
 		tableView.addBasicItem("Feria Gastronomica", "");
 		tableView.addBasicItem("MegaTours", "");
-		/*
-		 * tableView.addBasicItem(R.drawable.piedra,"Example 4 - UITableView",
-		 * "only one item");
-		 * tableView.addBasicItem("Example 5 - UITableViewActivity",
-		 * "a sample activity");
-		 * tableView.addBasicItem("Example 6 - UITableViewActivity temp",
-		 * "item with custom view");
-		 * tableView.addBasicItem("Example 7 - UIButton",
-		 * "some floating buttons");
-		 * tableView.addBasicItem("Example 8 - Clear List",
-		 * "this button will clear the list");
-		 */
-
 	}
 	
 	private class CustomClickListener implements ClickListener {

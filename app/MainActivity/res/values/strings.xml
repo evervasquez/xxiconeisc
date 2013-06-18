@@ -54,4 +54,9 @@
     <string name="add_to_playlist">Descargar</string>
     <string name="search">Search</string>
     <string name="titulo_deportivo">Campeonato Deportivo</string>
+    <string name="hospedajes">Hospedajes</string>
+    <string name="hostales">Hostales</string>
+    <string name="alojamientos">Alojamientos</string>
+    <string name="hoteles">Hoteles</string>
+    <string name="hosterias">Hosterias</string>
 </resources>
