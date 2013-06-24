@@ -12,10 +12,12 @@ import android.widget.Toast;
 import br.com.dina.ui.widget.UITableView;
 import br.com.dina.ui.widget.UITableView.ClickListener;
 import informacion.estadias;
+import informacion.universidades;
+
 import com.actionbarsherlock.app.SherlockFragment;
 import basedatos.basedatos;
 
-public class hoteles extends SherlockFragment {
+public class edecanes extends SherlockFragment {
 	UITableView tableView;
 	Intent i;
 	String[] dataBD;
@@ -26,7 +28,7 @@ public class hoteles extends SherlockFragment {
 		super.onActivityCreated(savedInstanceState);
 		tableView = (UITableView) getView().findViewById(R.id.tableView);
 		titulo =(TextView) getView().findViewById(R.id.titulo);
-		titulo.setText("Lista de Categorias de Hospedajes");
+		titulo.setText("Lista de Regiones");
 		fonts.cambiarfont_actionbar(getSherlockActivity(), "fonts/ArtistMedium.ttf");
 		fonts.cambiarfont(getSherlockActivity(), R.id.titulo, "fonts/ArtistMedium.ttf");
 		createList();
@@ -55,7 +57,7 @@ public class hoteles extends SherlockFragment {
 			if (objetoBD == null) {
 				objetoBD = new basedatos(getSherlockActivity());
 			}
-				dataBD = objetoBD.getCategorias();
+				dataBD = objetoBD.getRegiones();
 				for (int i = 0; i < dataBD.length; i++) {
 					tableView.addBasicItem(dataBD[i], "");
 				}
@@ -70,36 +72,25 @@ public class hoteles extends SherlockFragment {
 
 		@Override
 		public void onClick(int index) {
-			i = new Intent(getSherlockActivity(), estadias.class);
+			i = new Intent(getSherlockActivity(), universidades.class);
 			Log.d("MainActivity", "item clicked: " + index);
 
 			switch (index) {
 
 			case 0:
-				i.putExtra("categoria", dataBD[0]);
+				i.putExtra("region", dataBD[0]);
 				startActivity(i);
 				break;
 
 			case 1:
-				i.putExtra("categoria", dataBD[1]);
+				i.putExtra("region", dataBD[1]);
 				startActivity(i);
 				break;
 
 			case 2:
-				i.putExtra("categoria", dataBD[2]);
+				i.putExtra("region", dataBD[2]);
 				startActivity(i);
 				break;
-
-			case 3:
-				i.putExtra("categoria", dataBD[3]);
-				startActivity(i);
-				break;
-
-			case 4:
-				i.putExtra("categoria", dataBD[4]);
-				startActivity(i);
-				break;
-
 			default:
 				break;
 			}

@@ -14,7 +14,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
-import android.widget.Toast;
 
 //import android.widget.GridView;
 
@@ -67,22 +66,25 @@ public class MainActivity extends SherlockFragmentActivity implements
 		findViewById(R.id.inversion).setOnClickListener(this);
 		fonts.cambiarfont(this, R.id.actividades, "fonts/ArtistMedium.ttf");
 		findViewById(R.id.actividades).setOnClickListener(this);
-		fonts.cambiarfont(this, R.id.terrestre, "fonts/ArtistMedium.ttf");
+		fonts.cambiarfont(this, R.id.edecanes, "fonts/ArtistMedium.ttf");
+		findViewById(R.id.edecanes).setOnClickListener(this);
+		
+		/*fonts.cambiarfont(this, R.id.terrestre, "fonts/ArtistMedium.ttf");
 		findViewById(R.id.terrestre).setOnClickListener(this);
 		fonts.cambiarfont(this, R.id.aerea, "fonts/ArtistMedium.ttf");
 		findViewById(R.id.aerea).setOnClickListener(this);
 		fonts.cambiarfont(this, R.id.fluvial, "fonts/ArtistMedium.ttf");
-		findViewById(R.id.fluvial).setOnClickListener(this);
+		findViewById(R.id.fluvial).setOnClickListener(this);*/
 		fonts.cambiarfont(this, R.id.hoteles, "fonts/ArtistMedium.ttf");
 		findViewById(R.id.hoteles).setOnClickListener(this);
-		fonts.cambiarfont(this, R.id.restaurante, "fonts/ArtistMedium.ttf");
-		findViewById(R.id.restaurante).setOnClickListener(this);
+		//fonts.cambiarfont(this, R.id.restaurante, "fonts/ArtistMedium.ttf");
+		//findViewById(R.id.restaurante).setOnClickListener(this);
 		fonts.cambiarfont(this, R.id.turismo, "fonts/ArtistMedium.ttf");
 		findViewById(R.id.turismo).setOnClickListener(this);
 		
 		fonts.cambiarfont(this, R.id.favoritos, "fonts/ArtistMedium.ttf");
 		fonts.cambiarfont(this, R.id.xxi, "fonts/ArtistMedium.ttf");
-		fonts.cambiarfont(this, R.id.comollegar, "fonts/ArtistMedium.ttf");
+		//fonts.cambiarfont(this, R.id.comollegar, "fonts/ArtistMedium.ttf");
 		fonts.cambiarfont(this, R.id.tarapoto, "fonts/ArtistMedium.ttf");
 		// This will animate the drawer open and closed until the user manually
 		// drags it. Usually this would only be
@@ -173,7 +175,10 @@ public class MainActivity extends SherlockFragmentActivity implements
 		case R.id.actividades:
 			newFragment = new actividades();
 			break;
-		case R.id.terrestre:
+		case R.id.edecanes:
+			newFragment = new edecanes();
+			break;
+		/*case R.id.terrestre:
 			//newFragment = new terrestre();
 			Toast.makeText(getApplicationContext(), "Pagina en Construcci�n", Toast.LENGTH_LONG).show();
 			newFragment = new Xxiconeisc();
@@ -184,14 +189,14 @@ public class MainActivity extends SherlockFragmentActivity implements
 		case R.id.fluvial:
 			Toast.makeText(getApplicationContext(), "Pagina en Construcci�n", Toast.LENGTH_LONG).show();
 			newFragment = new Xxiconeisc();
-			break;
+			break;*/
 		case R.id.hoteles:
 			newFragment = new hoteles();
 			break;
-		case R.id.restaurante:
+		/*case R.id.restaurante:
 			Toast.makeText(getApplicationContext(), "Pagina en Construcci�n", Toast.LENGTH_LONG).show();
 			newFragment = new Xxiconeisc();
-			break;
+			break;*/
 		case R.id.turismo:
 			newFragment = new turismo();
 			break;

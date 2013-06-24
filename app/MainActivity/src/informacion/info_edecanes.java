@@ -1,82 +1,83 @@
 package informacion;
 
+import java.io.ByteArrayInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.widget.ShareActionProvider;
-
-import br.com.dina.ui.widget.UITableView;
-import br.com.dina.ui.widget.UITableView.ClickListener;
+import utiles.fonts;
+import utiles.paginaweb;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import utiles.paginaweb;
+import android.widget.Toast;
+import basedatos.basedatos;
+import br.com.dina.ui.model.BasicItem;
 import br.com.dina.ui.widget.UIButton;
+import br.com.dina.ui.widget.UITableView;
+import br.com.dina.ui.widget.UITableView.ClickListener;
+
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
+import com.actionbarsherlock.widget.ShareActionProvider;
 import com.ever.conesic.R;
 
-public class info_hospedajes extends SherlockFragmentActivity {
-	UITableView tableView;
-	UIButton mButton1;
-	Intent intent;
+public class info_edecanes extends SherlockFragmentActivity {
+	private UITableView tableView;
+	private UIButton mButton1;
 	paginaweb pagina;
-	String[] estadias, precios;
-	int[] objetos;
-	// double[] coordenadas;
-	hoteles_model datos;
+	long id;
+	basedatos objetoBD = null;
+	String[] dataBD;
 	private static final String SHARED_FILE_NAME = "shared.png";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		datos = (hoteles_model) getIntent().getExtras().getParcelable("datos");
-		// this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		
+		Bundle bundle = getIntent().getExtras();
+		id = bundle.getLong("id");
 		setTheme(R.style.Theme_Sherlock_Light);
 	}
 
 	@Override
 	protected void onStart() {
-		// TODO Auto-generated method stub
-
-		// Toast.makeText(getApplicationContext(), ""+Taca Peru,
-		// Toast.LENGTH_SHORT).show();
 		super.onRestart();
 	}
 
 	@Override
 	protected void onResume() {
-		// TODO Auto-generated method stub
-		estadias = datos.getEstadias();
-		precios = datos.getPrecios();
-		objetos = datos.getObjeto();
-		// coordenadas = datos.getCoordenadas();
-		//getSupportActionBar().setIcon(objetos[0]);
-		//getSupportActionBar().setTitle("");
-		setContentView(R.layout.concursos);
-
+		// poner todo el código
+		setContentView(R.layout.info_concursos);
+		fonts.cambiarfont_actionbar(this, "fonts/ArtistMedium.ttf");
+		getSupportActionBar().setTitle("Edecan");
 		mButton1 = (UIButton) findViewById(R.id.myButton1);
-		//UIButton.setTitle(estadias[0]); 
-		//UIButton.setSubTitle("");
-		//UIButton.setImage(objetos[1]);
-		
+		try {
+			objetoBD = new basedatos(getApplicationContext());
+			dataBD = objetoBD.getEdecan(id);
+			UIButton.setTitle(dataBD[0]);
+			UIButton.setSubTitle("");
+			// CustomClickListener1 listener = new CustomClickListener1();
+			// mButton1.addClickListener(listener);
+			// recuperar imagen
 
-		// mButton3 = (UIButton) findViewById(R.id.myButton3);*/
-		tableView = (UITableView) findViewById(R.id.tableView);
-		createList();
-		tableView.commit();
+			//
 
-		// ((TextView)findViewById(R.id.text)).setText(R.string.share_action_providers_content);
-		copyPrivateRawResuorceToPubliclyAccessibleFile();
-		// Log.i("datos",datos.getData().toString());
-		// Toast.makeText(getApplicationContext(),
-		// ""+Arrays.toString(datos.getData()),Toast.LENGTH_LONG).show();
+			tableView = (UITableView) findViewById(R.id.tableView);
+			createList();
+			tableView.commit();
+			objetoBD.cerrar();
+		} catch (Exception e) {
+			Toast.makeText(getApplicationContext(),
+					"Hubo un Error al recuperar los datos", Toast.LENGTH_SHORT)
+					.show();
+		}
 		super.onResume();
 	}
 
@@ -104,13 +105,14 @@ public class info_hospedajes extends SherlockFragmentActivity {
 		return shareIntent;
 	}
 
-	@SuppressWarnings("deprecation")
 	@SuppressLint("WorldReadableFiles")
-	private void copyPrivateRawResuorceToPubliclyAccessibleFile() {
+	private void copyPrivateRawResuorceToPubliclyAccessibleFile()
+			throws UnsupportedEncodingException {
 		InputStream inputStream = null;
 		FileOutputStream outputStream = null;
 		try {
-			inputStream = getResources().openRawResource(objetos[2]);// edite
+			inputStream = new ByteArrayInputStream(dataBD[9].getBytes("UTF-8"));
+			// inputStream = getResources().openRawResource(dataBD[9]);//edite
 			outputStream = openFileOutput(SHARED_FILE_NAME,
 					Context.MODE_WORLD_READABLE);
 			byte[] buffer = new byte[1024];
@@ -141,11 +143,10 @@ public class info_hospedajes extends SherlockFragmentActivity {
 	private void createList() {
 		CustomClickListener listener = new CustomClickListener();
 		tableView.setClickListener(listener);
-
-		for (int i = 0; i < estadias.length; i++) {
-			tableView.addBasicItem(estadias[i], precios[i]);
-		}
-
+		tableView.addBasicItem(R.drawable.celular, "Telefono", dataBD[1]);
+		tableView.addBasicItem(R.drawable.facebook, "Facebook", dataBD[2]);
+		tableView.addBasicItem(new BasicItem("Universidad", dataBD[3],
+				false));
 	}
 
 	private class CustomClickListener implements ClickListener {
@@ -154,17 +155,20 @@ public class info_hospedajes extends SherlockFragmentActivity {
 		public void onClick(int index) {
 			Log.d("MainActivity", "item clicked: " + index);
 			if (index == 0) {
-
+				// pagina = new paginaweb();
+				// pagina.paginaWeb(info_estadias.this, data[1]);
+				// http://www.scribd.com/document_downloads/140723306?extension=pdf&from=embed&source=embed
 			} else if (index == 1) {
-
+				// startActivity(new Intent(Intent.ACTION_VIEW,
+				// Uri.parse(data[2])));
 			} else if (index == 2) {
 
 			} else if (index == 3) {
-
+				// pagina = new paginaweb();
+				// pagina.paginaWeb(info_estadias.this, data[4]);
 			}
 
 		}
 
 	}
-
 }

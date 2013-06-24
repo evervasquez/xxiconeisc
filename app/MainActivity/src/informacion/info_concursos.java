@@ -96,7 +96,6 @@ public class info_concursos extends SherlockFragmentActivity {
     
    
 
-	@SuppressWarnings("deprecation")
 	@SuppressLint("WorldReadableFiles")
 	private void copyPrivateRawResuorceToPubliclyAccessibleFile() {
         InputStream inputStream = null;

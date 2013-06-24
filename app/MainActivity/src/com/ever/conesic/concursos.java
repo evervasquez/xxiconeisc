@@ -1,5 +1,6 @@
 package com.ever.conesic;
 
+import utiles.fonts;
 import informacion.concursos_model;
 import informacion.info_concursos;
 import android.content.Intent;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import br.com.dina.ui.widget.UITableView;
 import br.com.dina.ui.widget.UITableView.ClickListener;
 
@@ -19,10 +21,16 @@ public class concursos extends SherlockFragment {
 	int[] objeto;
 	Intent i;
 	String[] data;
+	TextView titulo;
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 		tableView = (UITableView) getView().findViewById(R.id.tableView);
+		titulo =(TextView) getView().findViewById(R.id.titulo);
+		titulo.setText("Lista de Concursos");
+		fonts.cambiarfont_actionbar(getSherlockActivity(), "fonts/ArtistMedium.ttf");
+		fonts.cambiarfont(getSherlockActivity(), R.id.titulo, "fonts/ArtistMedium.ttf");
+		
 		createList();
 		tableView.commit();
 	}

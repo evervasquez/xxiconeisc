@@ -86,7 +86,16 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/actividades"
             android:text="@string/actividades" />
-
+        
+        <TextView
+            android:id="@+id/edecanes"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/facebook"
+            android:text="Edecanes" />
+        
+<!-- 
         <TextView
             style="@style/MenuDrawer.Widget.Category"
             android:id="@+id/comollegar"
@@ -117,7 +126,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/fluvial"
             android:text="Via Fluvial" />
-
+ -->
         <TextView
             style="@style/MenuDrawer.Widget.Category"
             android:id="@+id/tarapoto"
@@ -132,7 +141,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/hoteles"
             android:text="Hoteles" />
-
+<!-- 
         <TextView
             android:id="@+id/restaurante"
             style="@style/MenuDrawer.Widget.Title"
@@ -140,7 +149,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/restaurante"
             android:text="Restaurantes" />
-
+ -->
         <TextView
             android:id="@+id/turismo"
             style="@style/MenuDrawer.Widget.Title"
