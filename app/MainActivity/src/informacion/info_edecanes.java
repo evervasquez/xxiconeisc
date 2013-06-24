@@ -63,11 +63,6 @@ public class info_edecanes extends SherlockFragmentActivity {
 			dataBD = objetoBD.getEdecan(id);
 			UIButton.setTitle(dataBD[0]);
 			UIButton.setSubTitle("");
-			// CustomClickListener1 listener = new CustomClickListener1();
-			// mButton1.addClickListener(listener);
-			// recuperar imagen
-
-			//
 
 			tableView = (UITableView) findViewById(R.id.tableView);
 			createList();

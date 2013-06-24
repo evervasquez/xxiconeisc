@@ -1,19 +1,4 @@
-/*
- * Copyright 2013 Taeho Kim (jyte82@gmail.com)
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * 
- */
 package com.ever.mapas;
 
 import android.content.res.Configuration;
@@ -27,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.androidhuman.google.maps.v2.support.NoPlayServicesFoundException;
 import com.androidhuman.google.maps.v2.support.SupportGoogleMap;
@@ -50,8 +36,10 @@ public class mapa extends FragmentActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
-	    coordenadas = getIntent().getDoubleArrayExtra("coordenadas");
-	    //Toast.makeText(getApplicationContext(), ""+Arrays.toString(coordenadas), Toast.LENGTH_LONG).show();
+	    Bundle bundle = getIntent().getExtras();
+	    coordenadas = bundle.getDoubleArray("coordenadas");
+	    //coordenadas = getIntent().getDoubleArrayExtra("coordenadas");
+	    Toast.makeText(getApplicationContext(), ""+coordenadas[1], Toast.LENGTH_LONG).show();
 	    setContentView(R.layout.mapa1);
 	}
 	
@@ -76,7 +64,7 @@ public class mapa extends FragmentActivity {
 		// TODO Auto-generated method stub
 		mGoogleMap.animateTo(new LatLng(coordenadas[0],coordenadas[1]));
 		//mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(-6.513434965802698,-76.37042999267578), 13));
-		mGoogleMap.animateCamera(CameraUpdateFactory.zoomTo(13),2000,null);
+		mGoogleMap.animateCamera(CameraUpdateFactory.zoomTo(14),2000,null);
 		mGoogleMap.setInfoWindowAdapter(new CustomInfoWindowAdapter());
 		super.onResume();
 		

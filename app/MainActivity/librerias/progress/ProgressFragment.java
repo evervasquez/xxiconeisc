@@ -17,12 +17,13 @@
 package progress;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
+
+import com.actionbarsherlock.app.SherlockFragment;
 import com.ever.conesic.R;
 
 /**
@@ -31,7 +32,7 @@ import com.ever.conesic.R;
  *
  * @author Evgeny Shishkin
  */
-public class ProgressFragment extends Fragment {
+public class ProgressFragment extends SherlockFragment {
 
     private View mProgressContainer;
     private View mContentContainer;

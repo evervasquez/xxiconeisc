@@ -54,7 +54,6 @@ public class estadias extends SherlockFragmentActivity {
 				objetoBD = new basedatos(getApplicationContext());
 			}
 				dataBD = objetoBD.getEstadias(categoria);
-				//getSupportActionBar().setTitle(dataBD.get(3).getCategoria());
 				for( int i = 0 ; i < dataBD.size() ; i++ ){
 					tableView.addBasicItem(dataBD.get(i).getNombre(), dataBD.get(i).getRango()); 
 					}

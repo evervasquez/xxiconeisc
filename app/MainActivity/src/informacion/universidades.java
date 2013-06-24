@@ -40,6 +40,7 @@ public class universidades extends SherlockFragmentActivity {
 		// TODO Auto-generated method stub
 		setContentView(R.layout.concursos2);
 		fonts.cambiarfont_actionbar(this, "fonts/ArtistMedium.ttf");
+		getSupportActionBar().setTitle(region);
 		tableView = (UITableView) findViewById(R.id.tableView);
 		createList();
 		tableView.commit();
@@ -54,7 +55,6 @@ public class universidades extends SherlockFragmentActivity {
 				objetoBD = new basedatos(getApplicationContext());
 			}
 				dataBD = objetoBD.getUniversidades(region);
-				getSupportActionBar().setTitle(dataBD.get(2).getRegion());
 				for( int i = 0 ; i < dataBD.size() ; i++ ){
 					tableView.addBasicItem(dataBD.get(i).getUniversidad()); 
 					}

@@ -55,6 +55,16 @@ public class basedatos {
 		@Override
 		public void onCreate(SQLiteDatabase db) {
 			// TODO Auto-generated method stub
+			
+			//creamos la tabla edecanes
+			db.execSQL("CREATE TABLE " + N_TABLA_E + "(" + 
+					ID_EDECANES + " INTEGER PRIMARY KEY, " + 
+					ID_NOMBRE_E + " TEXT, "+ 
+					ID_UNIVERSIDAD + " TEXT, " 
+					+ ID_CELULAR + " TEXT, "
+					+ ID_REGION + " TEXT, "+ 
+					ID_FACEBOOK + " TEXT);");
+			
 			db.execSQL("CREATE TABLE " + N_TABLA + "(" + ID_FILA
 					+ " INTEGER PRIMARY KEY, " + ID_NOMBRE + " TEXT, "
 					+ ID_RANGO + " TEXT, " + ID_CATEGORIA + " TEXT, "
@@ -63,13 +73,8 @@ public class basedatos {
 					+ ID_COSTO_C + " INTEGER, " + ID_COSTO_CX + " INTEGER, "
 					+ ID_TELEFONO + " TEXT, " + ID_DIRECCION + " TEXT, "
 					+ ID_IMAGEN + " TEXT, " + ID_LATITUD + " TEXT, "
-					+ ID_LONGITUD + " TEXT);");
+					+ ID_LONGITUD + " TEXT); ");
 			
-			//creamos la tabla edecanes
-			db.execSQL("CREATE TABLE " + N_TABLA_E + "(" + ID_EDECANES
-					+ " INTEGER PRIMARY KEY, " + ID_NOMBRE_E + " TEXT, "
-					+ ID_UNIVERSIDAD + " TEXT, " + ID_CELULAR + " TEXT, "
-					+ ID_REGION + " TEXT,"+ ID_FACEBOOK + " TEXT);");
 			
 			
 			db.execSQL("INSERT INTO "
@@ -274,46 +279,46 @@ public class basedatos {
 					" VALUES(2, 'Pierr Pinedo Flores', 'Universidad Católica Santo Toribio de Mogrovejo', '966575429 / #0186819', 'COSTA', 'fb.com/pierrpf?fref=ts')");
 			
 			db.execSQL("INSERT INTO " + N_TABLA_E + 
-					" VALUES(3, 'Luis Moisés Hidalgo Macedo', 'Universidad Nacional Tecnológica del Cono Sur de Lima', '942056631 / #692952', 'COSTA', 'fb.com/LuchiHm?ref=ts&fref=ts')");
+					" VALUES(3, 'Luis Moisés Hidalgo Macedo', 'Universidad Nacional Tecnológica del Cono Sur de Lima', '942056631 / #692952', 'COSTA', 'fb.com/LuchiHm')");
 			
 			db.execSQL("INSERT INTO " + N_TABLA_E + 
-					" VALUES(4, 'Joans Shupingahua Sangama', 'Universidad Nacional San Luis Gonzaga de Ica', '961039328',  'COSTA', 'fb.com/nataly')");
+					" VALUES(4, 'Joans Shupingahua Sangama', 'Universidad Nacional San Luis Gonzaga de Ica', '961039328',  'COSTA', 'https://www.facebook.com/L3nno')");
 			
 			db.execSQL("INSERT INTO " + N_TABLA_E + 
-					" VALUES(5, 'Jharold Alexander Valles Celis', 'Universidad Nacional de Trujillo', '962865903', 'COSTA', 'fb.com/nataly')");
+					" VALUES(5, 'Jharold Alexander Valles Celis', 'Universidad Nacional de Trujillo', '962865903', 'COSTA', 'https://www.facebook.com/jhalex.valles')");
 			
 			db.execSQL("INSERT INTO " + N_TABLA_E + 
-					" VALUES(6, 'Luis André Pérez Tangoa', 'Universidad Nacional Pedro Ruiz Gallo', '943150578', 'COSTA', 'fb.com/luisandre.pereztangoa?fref=ts')");
+					" VALUES(6, 'Luis André Pérez Tangoa', 'Universidad Nacional Pedro Ruiz Gallo', '943150578', 'COSTA', 'fb.com/luisandre.pereztangoa')");
 			
 			db.execSQL("INSERT INTO " + N_TABLA_E + 
-					" VALUES(7, 'Heidy Bartra Dávila', 'Universidad Nacional de Piura', '942612330', 'COSTA', 'fb.com/heidybartra.d?fref=ts')");
+					" VALUES(7, 'Heidy Bartra Dávila', 'Universidad Nacional de Piura', '942612330', 'COSTA', 'fb.com/heidybartra.d')");
 			
 			db.execSQL("INSERT INTO " + N_TABLA_E + 
-					" VALUES(8, 'Roel Angulo Torres', 'Universidad César Vallejo - Trujillo', '#948446820', 'COSTA', 'fb.com/nino.angulotorres?fref=ts')");
+					" VALUES(8, 'Roel Angulo Torres', 'Universidad César Vallejo - Trujillo', '#948446820', 'COSTA', 'fb.com/nino.angulotorres')");
 			
 			db.execSQL("INSERT INTO " + N_TABLA_E + 
-					" VALUES(9, 'Edson Arantes Rengifo Tuesta', 'Universidad Privada Telesup', '942867362', 'COSTA', 'fb.com/edsonarantes.rengifotuesta?fref=ts')");
+					" VALUES(9, 'Edson Arantes Rengifo Tuesta', 'Universidad Privada Telesup', '942867362', 'COSTA', 'fb.com/edsonarantes.rengifotuesta')");
 			
 			db.execSQL("INSERT INTO " + N_TABLA_E + 
-					" VALUES(10, 'Tatiana Díaz Cárdenas', 'Universidad Nacional Mayor de San Marcos', '942473620 / *410596', 'COSTA', 'fb.com/tatiana.diazcardenas?fref=pb&hc_location=friends_tab')");
+					" VALUES(10, 'Tatiana Díaz Cárdenas', 'Universidad Nacional Mayor de San Marcos', '942473620 / *410596', 'COSTA', 'fb.com/tatiana.diazcardenas')");
 			
 			db.execSQL("INSERT INTO " + N_TABLA_E + 
-					" VALUES(11, 'Sandino Hidalgo Tuanama', 'Universidad Nacional de Trujillo - Sede Valle Jequetepeque', '#979693482', 'COSTA', 'fb.com/sanhty?fref=ts')");
+					" VALUES(11, 'Sandino Hidalgo Tuanama', 'Universidad Nacional de Trujillo - Sede Valle Jequetepeque', '#979693482', 'COSTA', 'fb.com/sanhty')");
 			
 			db.execSQL("INSERT INTO " + N_TABLA_E + 
-					" VALUES(12, 'Alexis Saavedra', 'Universidad Inca Garcilaso de la Vega', '985233911', 'COSTA', 'fb.com/alexsp321?fref=ts')");
+					" VALUES(12, 'Alexis Saavedra', 'Universidad Inca Garcilaso de la Vega', '985233911', 'COSTA', 'fb.com/alexsp321')");
 			
 			db.execSQL("INSERT INTO " + N_TABLA_E + 
 					" VALUES(13, 'Freddy Huber Soplopuco Torres', 'Universidad Norbert Wiener', '950409798', 'COSTA', 'fb.com/nataly')");
 			
 			db.execSQL("INSERT INTO " + N_TABLA_E + 
-					" VALUES(14, 'Jino Luis Alva Cueva', 'Universidad José Carlos Mariátegui', '#947615217', 'COSTA', 'fb.com/jinoluis.alvacueva?fref=ts')");
+					" VALUES(14, 'Jino Luis Alva Cueva', 'Universidad José Carlos Mariátegui', '#947615217', 'COSTA', 'fb.com/jinoluis.alvacueva')");
 			
 			db.execSQL("INSERT INTO " + N_TABLA_E + 
 					" VALUES(15, 'Verónica Pezo Pezo', 'Universidad ESAN', '965004081', 'COSTA', 'fb.com/veriveri.pezo?fref=ts')");
 			
 			db.execSQL("INSERT INTO " + N_TABLA_E + 
-					" VALUES(16, 'Jeamith Mishel Torres Tello', 'Universidad Nacional de Ingeniería', '#961602097', 'COSTA', 'fb.com/Jeamith?fref=ts')");
+					" VALUES(16, 'Jeamith Mishel Torres Tello', 'Universidad Nacional de Ingeniería', '#961602097', 'COSTA', 'fb.com/Jeamith')");
 			
 			db.execSQL("INSERT INTO " + N_TABLA_E + 
 					" VALUES(17, 'Rosa Elena Soplopuco Torres', 'Universidad Nacional Jorge Basadre Grohmann', '#942461669', 'COSTA', 'fb.com/rosieleni.soplopucotorres')");
@@ -361,7 +366,7 @@ public class basedatos {
 					" VALUES(31, 'Katterine Cecilia Tejada Tavera', 'Universidad Nacional San Agustín de Arequipa', '#950996380', 'SIERRA', 'fb.com/katceci?fref=ts')");
 			
 			db.execSQL("INSERT INTO " + N_TABLA_E + 
-					" VALUES(32, 'Carlos Roldan Acuña', 'Universidad Nacional de la Amazonía Peruana', '972886145 ', 'SELVA', 'fb.com/nataly')");
+					" VALUES(32, 'Carlos Roldan Acuña', 'Universidad Nacional de la Amazonía Peruana', '972886145', 'SELVA', 'fb.com/nataly')");
 			
 			db.execSQL("INSERT INTO " + N_TABLA_E + 
 					" VALUES(33, 'Héctor Rojas Ríos', 'Universidad Científica del Perú', '953648378', 'SELVA', 'fb.com/hector.rojasrios.5?fref=ts')");
@@ -370,7 +375,7 @@ public class basedatos {
 					" VALUES(34, 'Linder Alexander', 'Instituto Superior Tecnológico Alto Huallaga-Tocache', '#966048212', 'SELVA', 'fb.com/labr10?fref=ts')");
 			
 			db.execSQL("INSERT INTO " + N_TABLA_E + 
-					" VALUES(35, 'Boris Galves Zegarra', 'Universidad Nacional de Ucayali', '#979913123 ', 'SELVA', 'fb.com/BorisGalvezZ?ref=ts&fref=ts')");
+					" VALUES(35, 'Boris Galves Zegarra', 'Universidad Nacional de Ucayali', '#979913123', 'SELVA', 'fb.com/BorisGalvezZ?ref=ts&fref=ts')");
 			}
 
 		@Override
@@ -449,7 +454,7 @@ public class basedatos {
 	//retorna las universidades por region
 	public List<universidades_model> getUniversidades(String region) {
 		List<universidades_model> uni = new ArrayList<universidades_model>();
-		String sql = "SELECT  \"_id\",\"universidad\",\"region\" FROM \"" + N_TABLA_E + "\"  WHERE   region = \"" + region + "\" ";
+		String sql = "SELECT  \"_id\",\"universidad\" FROM \"" + N_TABLA_E + "\"  WHERE   region = \"" + region + "\" ";
 		try {
 			abrir();
 			cursor = nBD.rawQuery(sql, null);
@@ -573,7 +578,6 @@ public class basedatos {
 		universidades_model estadias = new universidades_model();
 	    estadias.setId(cursor.getLong(0));
 	    estadias.setUniversidad(cursor.getString(1));
-	    estadias.setRegion(cursor.getString(2));
 	    return estadias;
 	  }
 }

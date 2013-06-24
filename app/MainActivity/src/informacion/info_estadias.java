@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 
+import progress.ProgressActivity;
 import utiles.fonts;
 import utiles.paginaweb;
 import android.annotation.SuppressLint;
@@ -27,8 +28,8 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.widget.ShareActionProvider;
-import progress.ProgressActivity;
 import com.ever.conesic.R;
+import com.ever.mapas.mapa;
 
 public class info_estadias extends SherlockFragmentActivity {
 	private UITableView tableView;
@@ -37,6 +38,7 @@ public class info_estadias extends SherlockFragmentActivity {
 	long id;
 	basedatos objetoBD = null;
 	String[] dataBD;
+	double[] coordenadas;
 	private static final String SHARED_FILE_NAME = "shared.png";
 
 	@Override
@@ -67,10 +69,6 @@ public class info_estadias extends SherlockFragmentActivity {
 			UIButton.setSubTitle("fotografia");
 			CustomClickListener1 listener = new CustomClickListener1();
 			mButton1.addClickListener(listener);
-			// recuperar imagen
-
-			//
-
 			tableView = (UITableView) findViewById(R.id.tableView);
 			createList();
 			tableView.commit();
@@ -142,6 +140,8 @@ public class info_estadias extends SherlockFragmentActivity {
 	}
 
 	private void createList() {
+
+		coordenadas = new double[]{Double.parseDouble(dataBD[10]),Double.parseDouble(dataBD[11])};
 		CustomClickListener listener = new CustomClickListener();
 		tableView.setClickListener(listener);
 		tableView.addBasicItem(R.drawable.celular, "Telefono", dataBD[7]);
@@ -181,12 +181,13 @@ public class info_estadias extends SherlockFragmentActivity {
 		public void onClick(int index) {
 			Log.d("MainActivity", "item clicked: " + index);
 			if (index == 0) {
-				pagina = new paginaweb();
-				// pagina.paginaWeb(info_estadias.this, data[1]);
-				// http://www.scribd.com/document_downloads/140723306?extension=pdf&from=embed&source=embed
+				//pagina = new paginaweb();
+				
 			} else if (index == 1) {
-				// startActivity(new Intent(Intent.ACTION_VIEW,
-				// Uri.parse(data[2])));
+				Intent i = new Intent(info_estadias.this, mapa.class);
+				i.putExtra("coordenadas", coordenadas);
+				//Toast.makeText(getApplicationContext(), ""+coordenadas.length, Toast.LENGTH_SHORT).show();
+				startActivity(i);
 			} else if (index == 2) {
 
 			} else if (index == 3) {
@@ -196,6 +197,7 @@ public class info_estadias extends SherlockFragmentActivity {
 
 		}
 	}
+
 
 	private class CustomClickListener1 implements
 			br.com.dina.ui.widget.UIButton.ClickListener {

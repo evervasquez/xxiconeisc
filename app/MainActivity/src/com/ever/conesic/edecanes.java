@@ -11,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import br.com.dina.ui.widget.UITableView;
 import br.com.dina.ui.widget.UITableView.ClickListener;
-import informacion.estadias;
 import informacion.universidades;
 
 import com.actionbarsherlock.app.SherlockFragment;
