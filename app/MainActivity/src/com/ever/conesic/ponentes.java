@@ -88,7 +88,7 @@ public class ponentes extends SherlockFragment {
 				data = new String[] {
 						"Arturo Cánez",
 						"Director de Lima Valley",
-						"Descargar",
+						"http://tarapotoventas.tk/descargas/cv/arturo_canez.pdf",
 						"https://www.facebook.com/arturocanez", 
 						"https://twitter.com/arturocanez",
 						null,
@@ -110,7 +110,7 @@ public class ponentes extends SherlockFragment {
 				data = new String[] { 
 						"Dr. Manuel E. Bermudez",
 						"University of Florida - USA",
-						"Descargar",
+						"http://tarapotoventas.tk/descargas/cv/Manuel_Bermudez-CV.pdf",
 						null,
 						null,
 						"manuel@cise.ufl.edu",
@@ -131,7 +131,7 @@ public class ponentes extends SherlockFragment {
 				data = new String[] { 
 				"DR. Nicolás Kemper Valverde",
 				"Doctor Inteligencia Artificial",
-				"http://www.josoull.com/Asesoria/Projects/201015/CV1.pdf", 
+				"http://tarapotoventas.tk/descargas/cv/nicolas_kemper.pdf", 
 				null,
 				null,
 				null,
@@ -151,7 +151,7 @@ public class ponentes extends SherlockFragment {
 				data = new String[] { 
 				"Mg. Avid Roman Gonzalez",
 				"Mg. Automatización Industrial Humana",
-				"https://7otzja.bay.livefilestore.com/y2ppjRHNRd9BGnyixi0pnv72jXCH4Z6bVzpPcerdKgYmyrRmyEGvQmfYwyUhaGAtxT063GGAs8VjcXQgcPQaVfNxCNP3pa75zboixyJxsvcUl4/CV_Avid_Roman_Gonzalez.pdf?download&psid=1", 
+				"http://tarapotoventas.tk/descargas/cv/Avid_Roman.pdf", 
 				"https://www.facebook.com/avid.romangonzalez",
 				"https://twitter.com/Avid_RG",
 				"avid.roman-gonzales@ieee.org",
@@ -172,7 +172,7 @@ public class ponentes extends SherlockFragment {
 				data = new String[] { 
 				"Msc.Ing. J.P. Suarez Reymundo",
 				"Mg. Ingenieria con Mención en Gestión de TI",
-				"Descargar", 
+				"http://tarapotoventas.tk/descargas/cv/JOHN_SUAREZ.pdf", 
 				"https://www.facebook.com/johnsuarezr",
 				"https://twitter.com/johnsuarezr",
 				"johnsuarezr@hotmail.com",
@@ -193,7 +193,7 @@ public class ponentes extends SherlockFragment {
 				data = new String[] { 
 				"Ing. Juan Sánchez Rosas",
 				"Soluciones de Código libre y abierto",
-				"Descargar", 
+				"http://tarapotoventas.tk/descargas/cv/Juan_S%C3%A1nchez.pdf", 
 				"https://www.facebook.com/juaneladio",
 				"https://twitter.com/juaneladio",
 				"jesanchez@mozilla.pe",
@@ -214,7 +214,7 @@ public class ponentes extends SherlockFragment {
 				data = new String[] { 
 				"Ing. Msc. Pedro A. Gonzales Sanchez",
 				"Mestrado em Ciências da Comunicação",
-				"Descargar", 
+				"http://tarapotoventas.tk/descargas/cv/pedro_gonzalez%20-%20cv.pdf", 
 				"https://www.facebook.com/pedroantonio.gonzales.9",
 				null,
 				null,
@@ -235,7 +235,7 @@ public class ponentes extends SherlockFragment {
 				data = new String[] { 
 				"Ing. Cristian Rodriguez Rivero",
 				"Computational Intelligence Society (CIS)",
-				"http://cristianrodriguezrivero.blogspot.com/", 
+				"http://tarapotoventas.tk/descargas/cv/Christian%20Rodriguez%20Rivero.pdf", 
 				"https://www.facebook.com/pedroantonio.gonzales.9",
 				null,
 				"crodriguezrivero@ieee.org",

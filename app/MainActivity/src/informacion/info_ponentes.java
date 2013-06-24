@@ -168,10 +168,7 @@ public class info_ponentes extends SherlockFragmentActivity {
 				}
 			}
 			else if(index == 3) {
-				if(data[5] != null){
-					pagina = new paginaweb();
-					pagina.paginaWeb(info_ponentes.this, data[5]);
-					}				
+						
 			}
 			else if(index == 4) {
 				if(data[6] != null){

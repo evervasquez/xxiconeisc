@@ -52,23 +52,10 @@ public class concursos extends SherlockFragment {
 		/////
 		CustomClickListener listener = new CustomClickListener();
 		tableView.setClickListener(listener);
-		////
-		//tableView.setOnClickListener(this);
+	
 		tableView.addBasicItem(R.drawable.papers, "", "");
 		tableView.addBasicItem(R.drawable.programacion, "", "");
 		tableView.addBasicItem(R.drawable.proyectos,"Concurso de Proyectos", "");
-		/*
-		 * tableView.addBasicItem(R.drawable.piedra,"Example 4 - UITableView",
-		 * "only one item");
-		 * tableView.addBasicItem("Example 5 - UITableViewActivity",
-		 * "a sample activity");
-		 * tableView.addBasicItem("Example 6 - UITableViewActivity temp",
-		 * "item with custom view");
-		 * tableView.addBasicItem("Example 7 - UIButton",
-		 * "some floating buttons");
-		 * tableView.addBasicItem("Example 8 - Clear List",
-		 * "this button will clear the list");
-		 */
 
 	}
 	
@@ -97,7 +84,7 @@ public class concursos extends SherlockFragment {
 				break;
 			case 1:
 				data = new String[] { "Concurso de Programación", "http://coneisc.pe/web/concurso_programacion",
-						"http://www.scribd.com/document_downloads/140723306?extension=pdf&from=embed&source=embed", "08-08-2013",
+						"http://tarapotoventas.tk/descargas/concursos/bases_concursos_de_programacion.pdf", "08-08-2013",
 						"http://coneisc.pe/web/concurso_programacion" };
 				
 				objeto = new int[] { R.drawable.programacion, R.drawable.programaciontitle,
@@ -113,7 +100,7 @@ public class concursos extends SherlockFragment {
 			case 2:
 				//data para armar la vista
 				data = new String[] { "Proyecto de Investigación", "http://coneisc.pe/web/concurso_proyectos_investigacion",
-						"http://www.scribd.com/document_downloads/140721071?extension=pdf&from=embed&source=embed", "08-08-2013",
+						"http://tarapotoventas.tk/descargas/concursos/bases_concursos_de_proyectos.pdf", "08-08-2013",
 						"http://coneisc.pe/web/concurso_proyectos_investigacion" };
 				
 				objeto = new int[] { R.drawable.proyectos, R.drawable.proyectostitle,

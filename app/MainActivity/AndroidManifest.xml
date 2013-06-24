@@ -37,7 +37,7 @@
         android:theme="@style/SampleTheme" >
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyADqHLIXuS0HR23A90n3PhXvM_8Llgi2Kk" />
+            android:value="AIzaSyChkWURyuWQxoyC8l_EuGPKdxG2KtJtJPc" />
 
         <activity
             android:name="com.ever.conesic.MainActivity"

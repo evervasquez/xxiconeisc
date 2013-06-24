@@ -30,7 +30,6 @@ import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.widget.ShareActionProvider;
 import com.ever.conesic.R;
 import com.ever.mapas.mapa;
-import com.google.android.gms.internal.db;
 
 public class info_estadias extends SherlockFragmentActivity {
 	private UITableView tableView;

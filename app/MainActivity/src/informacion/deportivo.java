@@ -1,9 +1,7 @@
 package informacion;
 
-import java.io.IOException;
 import java.io.InputStream;
 
-import android.content.res.AssetManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
@@ -14,8 +12,8 @@ import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
-import com.manuelpeinado.fadingactionbar.FadingActionBarHelper;
 import com.ever.conesic.R;
+import com.manuelpeinado.fadingactionbar.FadingActionBarHelper;
 
 public class deportivo extends SherlockActivity {
 	ImageView imagen;
