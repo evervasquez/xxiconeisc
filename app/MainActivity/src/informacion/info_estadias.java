@@ -30,6 +30,7 @@ import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.widget.ShareActionProvider;
 import com.ever.conesic.R;
 import com.ever.mapas.mapa;
+import com.google.android.gms.internal.db;
 
 public class info_estadias extends SherlockFragmentActivity {
 	private UITableView tableView;
@@ -181,11 +182,13 @@ public class info_estadias extends SherlockFragmentActivity {
 		public void onClick(int index) {
 			Log.d("MainActivity", "item clicked: " + index);
 			if (index == 0) {
-				//pagina = new paginaweb();
-				
+				Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+dataBD[7]));
+				startActivity(intent);
 			} else if (index == 1) {
 				Intent i = new Intent(info_estadias.this, mapa.class);
 				i.putExtra("coordenadas", coordenadas);
+				i.putExtra("estadia", dataBD[0]);
+				i.putExtra("direccion", dataBD[8]);
 				//Toast.makeText(getApplicationContext(), ""+coordenadas.length, Toast.LENGTH_SHORT).show();
 				startActivity(i);
 			} else if (index == 2) {

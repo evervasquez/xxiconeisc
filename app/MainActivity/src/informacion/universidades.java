@@ -40,7 +40,7 @@ public class universidades extends SherlockFragmentActivity {
 		// TODO Auto-generated method stub
 		setContentView(R.layout.concursos2);
 		fonts.cambiarfont_actionbar(this, "fonts/ArtistMedium.ttf");
-		getSupportActionBar().setTitle(region);
+		getSupportActionBar().setTitle("U de la "+region);
 		tableView = (UITableView) findViewById(R.id.tableView);
 		createList();
 		tableView.commit();

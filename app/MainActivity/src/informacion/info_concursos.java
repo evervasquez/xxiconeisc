@@ -5,22 +5,22 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.widget.ShareActionProvider;
-
-import br.com.dina.ui.model.BasicItem;
-import br.com.dina.ui.widget.UITableView;
-import br.com.dina.ui.widget.UITableView.ClickListener;
+import utiles.paginaweb;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import utiles.paginaweb;
+import br.com.dina.ui.model.BasicItem;
 import br.com.dina.ui.widget.UIButton;
+import br.com.dina.ui.widget.UITableView;
+import br.com.dina.ui.widget.UITableView.ClickListener;
+
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
+import com.actionbarsherlock.widget.ShareActionProvider;
 import com.ever.conesic.R;
 
 public class info_concursos extends SherlockFragmentActivity {

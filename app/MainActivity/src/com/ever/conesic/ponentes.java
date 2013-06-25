@@ -91,7 +91,7 @@ public class ponentes extends SherlockFragment {
 						"Descargar",
 						"https://www.facebook.com/arturocanez", 
 						"https://twitter.com/arturocanez",
-						"falta email",
+						null,
 						"http://pe.linkedin.com/in/arturocanez"};
 
 				// imagenes = icono, img_lista,img_compartir
@@ -111,10 +111,10 @@ public class ponentes extends SherlockFragment {
 						"Dr. Manuel E. Bermudez",
 						"University of Florida - USA",
 						"Descargar",
-						"no aye",
-						"no aye",
+						null,
+						null,
 						"manuel@cise.ufl.edu",
-						"no aye"
+						null
 				};
 				
 				objeto = new int[] { R.drawable.manuel_bermudez};
@@ -132,10 +132,10 @@ public class ponentes extends SherlockFragment {
 				"DR. Nicolás Kemper Valverde",
 				"Doctor Inteligencia Artificial",
 				"http://www.josoull.com/Asesoria/Projects/201015/CV1.pdf", 
-				"no aye",
-				"no aye",
-				"no aye",
-				"no aye"};
+				null,
+				null,
+				null,
+				null};
 				
 				objeto = new int[] { R.drawable.kemper_valverde};
 				
@@ -176,7 +176,7 @@ public class ponentes extends SherlockFragment {
 				"https://www.facebook.com/johnsuarezr",
 				"https://twitter.com/johnsuarezr",
 				"johnsuarezr@hotmail.com",
-				"no aye"};
+				null};
 				
 				objeto = new int[] { R.drawable.suarez_reymundo};
 				
@@ -199,7 +199,7 @@ public class ponentes extends SherlockFragment {
 				"jesanchez@mozilla.pe",
 				"http://pe.linkedin.com/in/juaneladio"};
 				
-				objeto = new int[] { R.drawable.suarez_reymundo};
+				objeto = new int[] { R.drawable.sanchez_rosas};
 				
 				datos = new ponentes_model(); 
 				datos.setData(data);
@@ -216,9 +216,9 @@ public class ponentes extends SherlockFragment {
 				"Mestrado em Ciências da Comunicação",
 				"Descargar", 
 				"https://www.facebook.com/pedroantonio.gonzales.9",
-				"no aye",
-				"no aye",
-				"no aye"};
+				null,
+				null,
+				null};
 				
 				objeto = new int[] { R.drawable.pedro_gonzales};
 				
@@ -237,11 +237,11 @@ public class ponentes extends SherlockFragment {
 				"Computational Intelligence Society (CIS)",
 				"http://cristianrodriguezrivero.blogspot.com/", 
 				"https://www.facebook.com/pedroantonio.gonzales.9",
-				"no aye",
+				null,
 				"crodriguezrivero@ieee.org",
 				"http://ar.linkedin.com/pub/cristian-rodriguez-rivero/18/b6a/74"};
 				
-				objeto = new int[] { R.drawable.pedro_gonzales};
+				objeto = new int[] { R.drawable.rodriguez_rivero};
 				
 				datos = new ponentes_model(); 
 				datos.setData(data);

@@ -1,6 +1,8 @@
 package com.ever.conesic;
 import utiles.fonts;
 
+import basedatos.basedatos;
+
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.MenuItem;
 import utiles.paginaweb;
@@ -90,12 +92,12 @@ public class MainActivity extends SherlockFragmentActivity implements
 		// drags it. Usually this would only be
 		// called on first launch.
 		mMenuDrawer.peekDrawer();
-
+		new basedatos(getApplication());
 		FragmentManager fm = getSupportFragmentManager();
 		FragmentTransaction transaction = fm.beginTransaction();
 		logo logito = new logo();
 		transaction.add(R.id.fragment_container, logito).commit();
-
+		
 		// GridView gv = (GridView)findViewById(R.id.gridview);
 		// error mare
 		// gv.setAdapter(new ImageAdapter(this));
