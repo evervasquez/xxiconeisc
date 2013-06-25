@@ -5,21 +5,22 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.widget.ShareActionProvider;
-import br.com.dina.ui.model.BasicItem;
-import br.com.dina.ui.widget.UITableView;
-import br.com.dina.ui.widget.UITableView.ClickListener;
+import utiles.paginaweb;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import utiles.paginaweb;
+import br.com.dina.ui.model.BasicItem;
 import br.com.dina.ui.widget.UIButton;
+import br.com.dina.ui.widget.UITableView;
+import br.com.dina.ui.widget.UITableView.ClickListener;
+
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
+import com.actionbarsherlock.widget.ShareActionProvider;
 import com.ever.conesic.R;
 
 public class info_ponentes extends SherlockFragmentActivity {
@@ -38,6 +39,7 @@ public class info_ponentes extends SherlockFragmentActivity {
 		datos = (ponentes_model)getIntent().getExtras().getParcelable("datos");
 		//this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setTheme(R.style.Theme_Sherlock_Light);
+ 
 	}
 	@Override
 	protected void onStart() {
@@ -132,44 +134,50 @@ public class info_ponentes extends SherlockFragmentActivity {
     	CustomClickListener listener = new CustomClickListener();
     	tableView.setClickListener(listener);
     	tableView.addBasicItem(R.drawable.docx,"C.V", data[2]);
+    	if(data[3]!=null){
     	tableView.addBasicItem(new BasicItem(R.drawable.facebook,"Facebook", data[3]));
+    	}if(data[4]!=null){
     	tableView.addBasicItem(R.drawable.twitter,"Twitter", data[4]);
+    	}if(data[5]!=null){
     	tableView.addBasicItem(R.drawable.email,"Email", data[5]);
+    	}if(data[6]!=null){
     	tableView.addBasicItem(R.drawable.in,"Linkedin", data[6]);
-    	//tableView.addBasicItem(R.drawable.twitter,"Twitter", data[5]);
-    	//tableView.addBasicItem(R.drawable.google,"Google+", data[6]);
-    	//tableView.addBasicItem(R.drawable.email,"Correo", data[7]);
-    	//tableView.addBasicItem("Costos", "");
-    	/*tableView.addBasicItem(R.drawable.piedra,"Example 4 - UITableView", "only one item");
-    	tableView.addBasicItem("Example 5 - UITableViewActivity", "a sample activity");
-    	tableView.addBasicItem("Example 6 - UITableViewActivity temp", "item with custom view");
-    	tableView.addBasicItem("Example 7 - UIButton", "some floating buttons");
-    	tableView.addBasicItem("Example 8 - Clear List", "this button will clear the list");*/
+    	}
     	
     }
     
-    private class CustomClickListener implements ClickListener {
 
+	private class CustomClickListener implements ClickListener {
 		@Override
 		public void onClick(int index) {
 			Log.d("MainActivity", "item clicked: " + index);
 			if(index == 0) {
-			
-				//subir curriculums
-				
+				pagina = new paginaweb();
+				pagina.paginaWeb(info_ponentes.this, data[2]);
 			}
 			else if(index == 1) {
-			//	startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(data[2])));
+				if(data[3] != null){
+				pagina = new paginaweb();
+				pagina.paginaWeb(info_ponentes.this, data[3]);
+				}
 			}
 			else if(index == 2) {
-					
+				if(data[4] != null){
+				pagina = new paginaweb();
+				pagina.paginaWeb(info_ponentes.this, data[4]);
+				}
 			}
 			else if(index == 3) {
-			//	pagina = new paginaweb();
-			//	pagina.paginaWeb(info_ponentes.this, data[4]);				
+				if(data[5] != null){
+					pagina = new paginaweb();
+					pagina.paginaWeb(info_ponentes.this, data[5]);
+					}				
 			}
 			else if(index == 4) {
-				
+				if(data[6] != null){
+					pagina = new paginaweb();
+					pagina.paginaWeb(info_ponentes.this, data[6]);
+					}	
 			}
 			else if(index == 5) {
 				

@@ -27,7 +27,7 @@ public class edecanes extends SherlockFragment {
 		super.onActivityCreated(savedInstanceState);
 		tableView = (UITableView) getView().findViewById(R.id.tableView);
 		titulo =(TextView) getView().findViewById(R.id.titulo);
-		titulo.setText("Lista de Regiones");
+		titulo.setText("Universidades por región");
 		fonts.cambiarfont_actionbar(getSherlockActivity(), "fonts/ArtistMedium.ttf");
 		fonts.cambiarfont(getSherlockActivity(), R.id.titulo, "fonts/ArtistMedium.ttf");
 		createList();
@@ -58,7 +58,7 @@ public class edecanes extends SherlockFragment {
 			}
 				dataBD = objetoBD.getRegiones();
 				for (int i = 0; i < dataBD.length; i++) {
-					tableView.addBasicItem(dataBD[i], "");
+					tableView.addBasicItem("Universidades de la "+dataBD[i], "");
 				}
 		} catch (Exception e) {
 			Toast.makeText(getSherlockActivity(),

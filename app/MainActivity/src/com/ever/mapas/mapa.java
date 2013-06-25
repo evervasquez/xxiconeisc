@@ -29,6 +29,8 @@ public class mapa extends FragmentActivity {
 	SupportGoogleMap mGoogleMap;
 	SupportMarker mMarker;
 	double[] coordenadas;
+	String estadia;
+	String direccion;
 	@Override
 	public void onConfigurationChanged(Configuration newConfig) {
 	    super.onConfigurationChanged(newConfig);
@@ -38,7 +40,8 @@ public class mapa extends FragmentActivity {
 	    super.onCreate(savedInstanceState);
 	    Bundle bundle = getIntent().getExtras();
 	    coordenadas = bundle.getDoubleArray("coordenadas");
-	    //coordenadas = getIntent().getDoubleArrayExtra("coordenadas");
+	    estadia =bundle.getString("estadia");
+	    direccion =bundle.getString("direccion");   
 	    Toast.makeText(getApplicationContext(), ""+coordenadas[1], Toast.LENGTH_LONG).show();
 	    setContentView(R.layout.mapa1);
 	}
@@ -48,7 +51,7 @@ public class mapa extends FragmentActivity {
 	    try {
 			mGoogleMap = SupportGoogleMap.newInstance(getApplicationContext(), 
 					(SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map));
-			mMarker = mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(coordenadas[0],coordenadas[1])).title("Taca Peru").snippet("Aereopuerto Tarapoto"));
+			mMarker = mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(coordenadas[0],coordenadas[1])).title(estadia).snippet(direccion));
 			//mGoogleMap.moveCamera(CameraUpdateFactory.newLatLng(mMarker.getMarker().getPosition()));
 			mGoogleMap.setInitialCameraPosition(mMarker.getMarker().getPosition());
 			mGoogleMap.setMyLocationEnabled(true);
@@ -129,22 +132,7 @@ public class mapa extends FragmentActivity {
 
         private void render(Marker marker, View view) {
             int badge;
-            badge = R.drawable.badge_qld;
-            // Use the equals() method on a Marker to check for equals.  Do not use ==.
-            /*if (marker.equals(mBrisbane)) {
-                badge = R.drawable.badge_qld;
-            } else if (marker.equals(mAdelaide)) {
-                badge = R.drawable.badge_sa;
-            } else if (marker.equals(mSydney)) {
-                badge = R.drawable.badge_nsw;
-            } else if (marker.equals(mMelbourne)) {
-                badge = R.drawable.badge_victoria;
-            } else if (marker.equals(mPerth)) {
-                badge = R.drawable.badge_wa;
-            } else {
-                // Passing 0 to setImageResource will clear the image view.
-                badge = 0;
-            }*/
+            badge = R.drawable.casa;
             ((ImageView) view.findViewById(R.id.badge)).setImageResource(badge);
 
             String title = marker.getTitle();

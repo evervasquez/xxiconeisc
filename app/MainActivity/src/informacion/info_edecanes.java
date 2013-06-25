@@ -150,18 +150,19 @@ public class info_edecanes extends SherlockFragmentActivity {
 		public void onClick(int index) {
 			Log.d("MainActivity", "item clicked: " + index);
 			if (index == 0) {
-				// pagina = new paginaweb();
-				// pagina.paginaWeb(info_estadias.this, data[1]);
-				// http://www.scribd.com/document_downloads/140723306?extension=pdf&from=embed&source=embed
+				Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+dataBD[1]));
+				startActivity(intent);
 			} else if (index == 1) {
-				// startActivity(new Intent(Intent.ACTION_VIEW,
-				// Uri.parse(data[2])));
-			} else if (index == 2) {
+				pagina = new paginaweb();
+				pagina.paginaWeb(info_edecanes.this, "http://www."+dataBD[2]);
+				/*Intent intent = new Intent(Intent.ACTION_SEND);
+				Intent sendIntent = new Intent();
+				sendIntent.setAction(Intent.ACTION_SEND);
+				sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+				sendIntent.setType("text/plain");
+				startActivity(Intent.createChooser(sendIntent, getResources().getText(R.string.ponentes)));*/
 
-			} else if (index == 3) {
-				// pagina = new paginaweb();
-				// pagina.paginaWeb(info_estadias.this, data[4]);
-			}
+			} 
 
 		}
 
