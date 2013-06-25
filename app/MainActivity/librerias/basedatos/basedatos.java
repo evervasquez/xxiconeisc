@@ -273,7 +273,7 @@ public class basedatos {
 			
 			//insertamos a la tabla edecanes
 			db.execSQL("INSERT INTO " + N_TABLA_E + 
-					" VALUES(1, 'Natal√Ω Huam√°n Macedo', 'Universidad Federico Villarreal', '#941852368', 'COSTA', 'fb.com/nataly.macedo.7')");
+					" VALUES(1, 'Natal˝ Huam·n Macedo', 'Universidad Federico Villarreal', '941852368', 'Costa', 'fb.com/nataly.macedo.7')");
 			
 			db.execSQL("INSERT INTO " + N_TABLA_E + 
 					" VALUES(2, 'Pierr Pinedo Flores', 'Universidad Cat√≥lica Santo Toribio de Mogrovejo', '966575429 / #0186819', 'COSTA', 'fb.com/pierrpf?fref=ts')");
