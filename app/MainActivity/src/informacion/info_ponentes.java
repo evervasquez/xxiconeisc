@@ -13,7 +13,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 import br.com.dina.ui.model.BasicItem;
 import br.com.dina.ui.widget.UIButton;
 import br.com.dina.ui.widget.UITableView;
@@ -195,7 +194,10 @@ public class info_ponentes extends SherlockFragmentActivity {
 			br.com.dina.ui.widget.UIButton.ClickListener {
 
 		public void onClick(View view) {
-			Toast.makeText(getApplicationContext(), "Aquí la Biografia", Toast.LENGTH_SHORT).show();
+			Intent intent = new Intent(info_ponentes.this, biografia.class);
+			intent.putExtra("biografia", objetos[1]);
+			intent.putExtra("ponente", data[0]);
+			startActivity(intent);
 		}
 
 	}

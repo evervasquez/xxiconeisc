@@ -95,7 +95,7 @@ public class ponentes extends SherlockFragment {
 						"http://pe.linkedin.com/in/arturocanez"};
 
 				// imagenes = icono, img_lista,img_compartir
-				objeto = new int[] { R.drawable.arturo_canez};
+				objeto = new int[] { R.drawable.arturo_canez,R.drawable.limavalley};
 				// coordenadas = new
 				// double[]{-6.513434965802698,-76.37042999267578};
 				datos = new ponentes_model();
@@ -117,7 +117,7 @@ public class ponentes extends SherlockFragment {
 						null
 				};
 				
-				objeto = new int[] { R.drawable.manuel_bermudez};
+				objeto = new int[] { R.drawable.manuel_bermudez,R.drawable.limavalley};
 
 				datos = new ponentes_model(); 
 				datos.setData(data);
@@ -137,7 +137,7 @@ public class ponentes extends SherlockFragment {
 				null,
 				null};
 				
-				objeto = new int[] { R.drawable.kemper_valverde};
+				objeto = new int[] { R.drawable.kemper_valverde,R.drawable.limavalley};
 				
 				datos = new ponentes_model(); 
 				datos.setData(data);
@@ -157,7 +157,7 @@ public class ponentes extends SherlockFragment {
 				"avid.roman-gonzales@ieee.org",
 				"http://pe.linkedin.com/pub/avid-roman-gonzalez/2a/a74/9"};
 				
-				objeto = new int[] { R.drawable.roman_gonzales};
+				objeto = new int[] { R.drawable.roman_gonzales,R.drawable.limavalley};
 				
 				datos = new ponentes_model(); 
 				datos.setData(data);
@@ -178,7 +178,7 @@ public class ponentes extends SherlockFragment {
 				"johnsuarezr@hotmail.com",
 				null};
 				
-				objeto = new int[] { R.drawable.suarez_reymundo};
+				objeto = new int[] { R.drawable.suarez_reymundo,R.drawable.limavalley};
 				
 				datos = new ponentes_model(); 
 				datos.setData(data);
@@ -199,7 +199,7 @@ public class ponentes extends SherlockFragment {
 				"jesanchez@mozilla.pe",
 				"http://pe.linkedin.com/in/juaneladio"};
 				
-				objeto = new int[] { R.drawable.sanchez_rosas};
+				objeto = new int[] { R.drawable.sanchez_rosas,R.drawable.limavalley};
 				
 				datos = new ponentes_model(); 
 				datos.setData(data);
@@ -220,7 +220,7 @@ public class ponentes extends SherlockFragment {
 				null,
 				null};
 				
-				objeto = new int[] { R.drawable.pedro_gonzales};
+				objeto = new int[] { R.drawable.pedro_gonzales,R.drawable.limavalley};
 				
 				datos = new ponentes_model(); 
 				datos.setData(data);
@@ -241,7 +241,7 @@ public class ponentes extends SherlockFragment {
 				"crodriguezrivero@ieee.org",
 				"http://ar.linkedin.com/pub/cristian-rodriguez-rivero/18/b6a/74"};
 				
-				objeto = new int[] { R.drawable.rodriguez_rivero};
+				objeto = new int[] { R.drawable.rodriguez_rivero,R.drawable.limavalley};
 				
 				datos = new ponentes_model(); 
 				datos.setData(data);

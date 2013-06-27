@@ -9,13 +9,13 @@ public class ponentes_model implements Parcelable {
 	private int[] objetos;
 	//private double[] coordenadas;
 	public ponentes_model() {
-		objetos = new int[1];
+		objetos = new int[2];
 		data = new String[7];
 		//coordenadas = new double[2];
 	}
 
 	public ponentes_model(Parcel in) {
-		objetos = new int[1];
+		objetos = new int[2];
 		data = new String[7];
 		//coordenadas = new double[2];
 		readFromParcel(in);
