@@ -42,11 +42,11 @@ public class deportivo extends SherlockActivity {
 		TextView text = (TextView) findViewById(R.id.text_deportivo);
 		 
 		text.setText(Html.fromHtml("<font color=\"blue\"><h3>Finalidad</h3></br>" +
-									"<div>La presente base tiene por finalidad normar la organizaci贸n y ejecuci贸n del campeonato deportivo entre las universidades participantes, promoviendo la confraternidad deportiva social.</div></br>" +
+									"<div>La presente base tiene por finalidad normar la organizaci髇 y ejecuci髇 del campeonato deportivo entre las universidades participantes, promoviendo la confraternidad deportiva social.</div></br>" +
 									"<h3>Objetivos</h3></br>" +
-									"Fomentar las relaciones humanas con la pr谩ctica deportiva, " +
-									"Promover la pr谩ctica de valores a trav茅s de la actividad deportiva y " +
-									"Contribuir a una sana diversi贸n y esparcimiento de la poblaci贸n estudiantil.</font>")); // NOTA: las barras invertidas sirven para anular el efecto de las comillas en el String.
+									"Fomentar las relaciones humanas con la pr醕tica deportiva, " +
+									"Promover la pr醕tica de valores a trav閟 de la actividad deportiva y " +
+									"Contribuir a una sana diversi髇 y esparcimiento de la poblaci髇 estudiantil.</font>")); // NOTA: las barras invertidas sirven para anular el efecto de las comillas en el String.
 		ImageView paper = (ImageView)findViewById(R.id.image_header);
         Resources res = getResources();
         Drawable drawable = res.getDrawable(R.drawable.deportivo);

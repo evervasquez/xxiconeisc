@@ -12,18 +12,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.androidhuman.google.maps.v2.support.NoPlayServicesFoundException;
 import com.androidhuman.google.maps.v2.support.SupportGoogleMap;
 import com.androidhuman.google.maps.v2.support.model.SupportMarker;
+import com.ever.conesic.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.ever.conesic.R;
 public class mapa extends FragmentActivity {
 
 	SupportGoogleMap mGoogleMap;
@@ -42,7 +41,6 @@ public class mapa extends FragmentActivity {
 	    coordenadas = bundle.getDoubleArray("coordenadas");
 	    estadia =bundle.getString("estadia");
 	    direccion =bundle.getString("direccion");   
-	    Toast.makeText(getApplicationContext(), ""+coordenadas[1], Toast.LENGTH_LONG).show();
 	    setContentView(R.layout.mapa1);
 	}
 	
@@ -53,6 +51,7 @@ public class mapa extends FragmentActivity {
 					(SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map));
 			mMarker = mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(coordenadas[0],coordenadas[1])).title(estadia).snippet(direccion));
 			//mGoogleMap.moveCamera(CameraUpdateFactory.newLatLng(mMarker.getMarker().getPosition()));
+			mMarker.showInfoWindow();
 			mGoogleMap.setInitialCameraPosition(mMarker.getMarker().getPosition());
 			mGoogleMap.setMyLocationEnabled(true);
 			mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(coordenadas[0],coordenadas[1]), 2));

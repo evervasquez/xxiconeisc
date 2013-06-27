@@ -145,23 +145,23 @@ public class info_estadias extends SherlockFragmentActivity {
 		CustomClickListener listener = new CustomClickListener();
 		tableView.setClickListener(listener);
 		tableView.addBasicItem(R.drawable.celular, "Telefono", dataBD[7]);
-		tableView.addBasicItem(R.drawable.ubicacion, "UbicaciÃ³n", dataBD[8]);
+		tableView.addBasicItem(R.drawable.ubicacion, "Ubicación", dataBD[8]);
 		if (dataBD[1] != null) {
-			tableView.addBasicItem(new BasicItem("Costo de Habitacion simple",
+			tableView.addBasicItem(new BasicItem("Costo de Habitación simple",
 					"S/." + dataBD[1], false));
 		}
 		if (dataBD[2] != null) {
-			tableView.addBasicItem(new BasicItem("Costo de Habitacion doble",
+			tableView.addBasicItem(new BasicItem("Costo de Habitación doble",
 					"S/." + dataBD[2], false));
 		}
 		if (dataBD[4] != null) {
-			tableView.addBasicItem(new BasicItem("Costo de Habitacion triple",
+			tableView.addBasicItem(new BasicItem("Costo de Habitación triple",
 					"S/." + dataBD[4], false));
 		}
 		if (dataBD[3] != null) {
 			tableView
 					.addBasicItem(new BasicItem(
-							"Costo de HabitaciÃ³n matrimonial", "S/."
+							"Costo de Habitación matrimonial", "S/."
 									+ dataBD[3], false));
 		}
 		if (dataBD[5] != null) {
@@ -169,7 +169,7 @@ public class info_estadias extends SherlockFragmentActivity {
 					"Costo de Habitacion cuadruple", "S/." + dataBD[5], false));
 		}
 		if (dataBD[6] != null) {
-			tableView.addBasicItem(new BasicItem("Costo de Habitacion CX",
+			tableView.addBasicItem(new BasicItem("Costo de Habitación CX",
 					"S/." + dataBD[6], false));
 		}
 

@@ -83,7 +83,7 @@ public class concursos extends SherlockFragment {
 				startActivity(i);
 				break;
 			case 1:
-				data = new String[] { "Concurso de ProgramaciÃ³n", "http://coneisc.pe/web/concurso_programacion",
+				data = new String[] { "Concurso de Programación", "http://coneisc.pe/web/concurso_programacion",
 						"http://tarapotoventas.tk/descargas/concursos/bases_concursos_de_programacion.pdf", "08-08-2013",
 						"http://coneisc.pe/web/concurso_programacion" };
 				
@@ -99,7 +99,7 @@ public class concursos extends SherlockFragment {
 				break;
 			case 2:
 				//data para armar la vista
-				data = new String[] { "Proyecto de InvestigaciÃ³n", "http://coneisc.pe/web/concurso_proyectos_investigacion",
+				data = new String[] { "Proyecto de Investigación", "http://coneisc.pe/web/concurso_proyectos_investigacion",
 						"http://tarapotoventas.tk/descargas/concursos/bases_concursos_de_proyectos.pdf", "08-08-2013",
 						"http://coneisc.pe/web/concurso_proyectos_investigacion" };
 				

@@ -1,39 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/gradiente"
-    android:orientation="vertical"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin">
+    android:layout_height="wrap_content"
+    android:background="?android:attr/windowBackground"
+    android:orientation="vertical" >
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="fill_parent"
-        android:layout_height="125dp"
-        android:contentDescription="@string/portada"
-        android:src="@drawable/portada" />
-
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
-
-        <LinearLayout
-            android:id="@+id/layout1"
+        <ImageView
+            android:id="@+id/image_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical" >
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/title_activity_xxiconeisc"
+            android:scaleType="centerCrop"
+            android:src="@drawable/coneisc" />
+	<ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffd3d3d3" >
 
-            <TextView
-                android:id="@+id/LblEtiqueta"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/data"
-                android:textColor="@color/blanco"
-                android:textIsSelectable="true" />
-        </LinearLayout>
+        <WebView 
+            android:id="@+id/text_xxiconeisc" 
+            android:layout_width="fill_parent" 
+            android:layout_height="fill_parent" />
     </ScrollView>
+        
 
 </LinearLayout>

@@ -58,9 +58,9 @@ public class conferencias extends SherlockFragment {
 
 						switch (calendar.getSelectedDate().getDate()) {
 						case 12:
-							titulos = new String[] { "Programaci贸n",
+							titulos = new String[] { "Programaci髇",
 									"Entrega de Materiales",
-									"Inauguraci贸n XXICONEISC",
+									"Inauguraci髇 XXICONEISC",
 									"Conferencia Internacional 1",
 									"Noches de Confraternidad" };
 							subtitulos = new String[] { "Lunes 12 de Agosto",
@@ -69,10 +69,10 @@ public class conferencias extends SherlockFragment {
 							showPopup(getActivity(), p, titulos, subtitulos);
 							break;
 						case 13:
-							titulos = new String[] { "Programaci贸n",
+							titulos = new String[] { "Programaci髇",
 									"Conferencia Nacional 1",
 									"Conferencia Internacional 2",
-									"Feria Tegnol贸gica",
+									"Feria Tegnol骻ica",
 									"Concurso de Proy. Cientifico",
 									"Conferencia Nacional 2",
 									"Conferencia Internacional 3",
@@ -84,10 +84,10 @@ public class conferencias extends SherlockFragment {
 							showPopup(getActivity(), p, titulos, subtitulos);
 							break;
 						case 14:
-							titulos = new String[] { "Programaci贸n",
+							titulos = new String[] { "Programaci髇",
 									"Conferencia Nacional 3",
 									"Conferencia Internacional 4",
-									"Feria Tegnol贸gica",
+									"Feria Tegnol骻ica",
 									"Concurso de Proy. Cientifico",
 									"Conferencia Internacional 5",
 									"Conferencia Internacional 6",
@@ -99,10 +99,10 @@ public class conferencias extends SherlockFragment {
 							showPopup(getActivity(), p, titulos, subtitulos);
 							break;
 						case 15:
-							titulos = new String[] { "Programaci贸n",
+							titulos = new String[] { "Programaci髇",
 									"Conferencia Nacional 4",
 									"Conferencia Internacional 7",
-									"Feria Tegnol贸gica",
+									"Feria Tegnol骻ica",
 									"Concurso de Proy. Cientifico",
 									"Conferencia Nacional 5",
 									"Conferencia Internacional 8",
@@ -114,10 +114,10 @@ public class conferencias extends SherlockFragment {
 							showPopup(getActivity(), p, titulos, subtitulos);
 							break;
 						case 16:
-							titulos = new String[] { "Programaci贸n",
+							titulos = new String[] { "Programaci髇",
 									"Conferencia Nacional 6",
 									"Conferencia Internacional 9",
-									"Feria Tegnol贸gica",
+									"Feria Tegnol骻ica",
 									"Concurso de Proy. Cientifico",
 									"Conferencia Nacional 7",
 									"Conferencia Internacional 10",
@@ -129,10 +129,10 @@ public class conferencias extends SherlockFragment {
 							showPopup(getActivity(), p, titulos, subtitulos);
 							break;
 						case 17:
-							titulos = new String[] { "Programaci贸n",
+							titulos = new String[] { "Programaci髇",
 									"MegaTours" };
 							subtitulos = new String[] { "Sabado 17 de Agosto",
-									"Todo el d铆a" };
+									"Todo el d韆" };
 							showPopup(getActivity(), p, titulos, subtitulos);
 							break;
 						default:

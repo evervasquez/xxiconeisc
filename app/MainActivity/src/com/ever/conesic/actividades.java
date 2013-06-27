@@ -69,17 +69,17 @@ public class actividades extends SherlockFragment {
 			case 1:
 				//i = new Intent(getSherlockActivity(), gastronomica.class);
 		        //startActivity(i);
-				Toast.makeText(getSherlockActivity(), "Muy Pronto Colocaremos la InformaciÃ³n", Toast.LENGTH_SHORT).show();
+				Toast.makeText(getSherlockActivity(), "Muy Pronto Colocaremos la Información", Toast.LENGTH_SHORT).show();
 				break;
 			case 2:
 				//i = new Intent(getSherlockActivity(), megatours.class);
 		        //startActivity(i);
-				Toast.makeText(getSherlockActivity(), "Muy Pronto Colocaremos la InformaciÃ³n", Toast.LENGTH_SHORT).show();
+				Toast.makeText(getSherlockActivity(), "Muy Pronto Colocaremos la Información", Toast.LENGTH_SHORT).show();
 				break;
 			case 3:
 				//i = new Intent(getSherlockActivity(), megatours.class);
 		        //startActivity(i);
-				Toast.makeText(getSherlockActivity(), "Muy Pronto Colocaremos la InformaciÃ³n", Toast.LENGTH_SHORT).show();
+				Toast.makeText(getSherlockActivity(), "Muy Pronto Colocaremos la Información", Toast.LENGTH_SHORT).show();
 				break;
 			default:
 				break;

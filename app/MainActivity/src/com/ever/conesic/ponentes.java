@@ -54,24 +54,24 @@ public class ponentes extends SherlockFragment {
 		tableView.setClickListener(listener);
 		// //
 		// tableView.setOnClickListener(this);
-		tableView.addBasicItem(R.drawable.arturo_canez, "Arturo C√°nez",
+		tableView.addBasicItem(R.drawable.arturo_canez, "Arturo C·nez",
 				"Director de Lima Valley");
 		tableView.addBasicItem(R.drawable.manuel_bermudez,
-				"P.h.D. Manuel Berm√∫dez",
+				"P.h.D. Manuel Berm˙dez",
 				"Coor. de Relaciones con Am√©rica Latina");
 		tableView.addBasicItem(R.drawable.kemper_valverde,
-				"DR. Nicol√°s Kemper Valverde", "Prof. Inteligencia Artificial");
+				"DR. NicolÛs Kemper Valverde", "Prof. Inteligencia Artificial");
 		tableView.addBasicItem(R.drawable.roman_gonzales,
 				"Mg. Avid Roman Gonzales ",
-				"Mg. Automatizaci√≥n Industrial y Humana");
+				"Mg. AutomatizaciÛn Industrial y Humana");
 		tableView.addBasicItem(R.drawable.suarez_reymundo,
 				"Ing.J.P. Suarez Reymundo", "Influencer de Microsoft Per√∫");
 		tableView.addBasicItem(R.drawable.sanchez_rosas,
-				"Ing. Juan S√°nchez Rosas",
+				"Ing. Juan S·nchez Rosas",
 				"Soluciones de C√≥digo libre y abierto");
 		tableView.addBasicItem(R.drawable.pedro_gonzales,
 				"Ing. Msc. Pedro A. Gonzales Sanchez",
-				"Mestrado em Ci√™ncias da Comunica√ß√£o");
+				"Mestrado em Ci·ncias da ComunicaÁ„o");
 		tableView.addBasicItem(R.drawable.rodriguez_rivero,
 				"Ing. Cristian Rodriguez Rivero",
 				"Computational Intelligence Society (CIS)");
@@ -86,7 +86,7 @@ public class ponentes extends SherlockFragment {
 			switch (index) {
 			case 0:
 				data = new String[] {
-						"Arturo C√°nez",
+						"Arturo C·nez",
 						"Director de Lima Valley",
 						"http://tarapotoventas.tk/descargas/cv/arturo_canez.pdf",
 						"https://www.facebook.com/arturocanez", 
@@ -129,7 +129,7 @@ public class ponentes extends SherlockFragment {
 				// data para armar la vista
 				
 				data = new String[] { 
-				"DR. Nicol√°s Kemper Valverde",
+				"DR. Nicol·s Kemper Valverde",
 				"Doctor Inteligencia Artificial",
 				"http://tarapotoventas.tk/descargas/cv/nicolas_kemper.pdf", 
 				null,
@@ -150,7 +150,7 @@ public class ponentes extends SherlockFragment {
 				
 				data = new String[] { 
 				"Mg. Avid Roman Gonzalez",
-				"Mg. Automatizaci√≥n Industrial Humana",
+				"Mg. AutomatizaciÛn Industrial Humana",
 				"http://tarapotoventas.tk/descargas/cv/Avid_Roman.pdf", 
 				"https://www.facebook.com/avid.romangonzalez",
 				"https://twitter.com/Avid_RG",
@@ -171,7 +171,7 @@ public class ponentes extends SherlockFragment {
 				
 				data = new String[] { 
 				"Msc.Ing. J.P. Suarez Reymundo",
-				"Mg. Ingenieria con Menci√≥n en Gesti√≥n de TI",
+				"Mg. Ingenieria con MenciÛn en GestiÛn de TI",
 				"http://tarapotoventas.tk/descargas/cv/JOHN_SUAREZ.pdf", 
 				"https://www.facebook.com/johnsuarezr",
 				"https://twitter.com/johnsuarezr",
@@ -191,8 +191,8 @@ public class ponentes extends SherlockFragment {
 				// data para armar la vista
 				
 				data = new String[] { 
-				"Ing. Juan S√°nchez Rosas",
-				"Soluciones de C√≥digo libre y abierto",
+				"Ing. Juan S·nchez Rosas",
+				"Soluciones de CÛdigo libre y abierto",
 				"http://tarapotoventas.tk/descargas/cv/Juan_S%C3%A1nchez.pdf", 
 				"https://www.facebook.com/juaneladio",
 				"https://twitter.com/juaneladio",
@@ -213,7 +213,7 @@ public class ponentes extends SherlockFragment {
 				
 				data = new String[] { 
 				"Ing. Msc. Pedro A. Gonzales Sanchez",
-				"Mestrado em Ci√™ncias da Comunica√ß√£o",
+				"Mestrado em CiÍncia da Comunica√ß√£o",
 				"http://tarapotoventas.tk/descargas/cv/pedro_gonzalez%20-%20cv.pdf", 
 				"https://www.facebook.com/pedroantonio.gonzales.9",
 				null,

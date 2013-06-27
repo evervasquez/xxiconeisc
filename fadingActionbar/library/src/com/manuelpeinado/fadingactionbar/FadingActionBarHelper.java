@@ -16,6 +16,7 @@
 package com.manuelpeinado.fadingactionbar;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Build;

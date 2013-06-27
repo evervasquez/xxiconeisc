@@ -124,7 +124,6 @@ public class MainActivity extends SherlockFragmentActivity implements
 			mMenuDrawer.closeMenu();
 			return;
 		}
-
 		super.onBackPressed();
 	}
 	
@@ -151,10 +150,8 @@ public class MainActivity extends SherlockFragmentActivity implements
 
 		switch (mActiveViewId) {
 		case R.id.xxiconeisc:
-			//newFragment = new Xxiconeisc();
-			pagina = new paginaweb();
-			pagina.paginaWeb(this, "http://coneisc.pe/");
-			return;
+			newFragment = new Xxiconeisc();
+			break;
 		case R.id.conocenos:
 			pagina = new paginaweb();
 			pagina.paginaWeb(this, "http://coneisc.pe/web/presentacion");

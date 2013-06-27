@@ -132,7 +132,7 @@ public class info_concursos extends SherlockFragmentActivity {
     private void createList() {
     	CustomClickListener listener = new CustomClickListener();
     	tableView.setClickListener(listener);
-    	tableView.addBasicItem(R.drawable.informacion,"InformaciÃ³n", "Wikipedia");
+    	tableView.addBasicItem(R.drawable.informacion,"Información", "Wikipedia");
     	tableView.addBasicItem(new BasicItem(R.drawable.pdf,"Bases de Concurso", "Descargar"));
     	tableView.addBasicItem(R.drawable.calendario,"Fechas Importantes", data[3]);
     	tableView.addBasicItem(R.drawable.firefox,"Coneisc Web", data[4]);
