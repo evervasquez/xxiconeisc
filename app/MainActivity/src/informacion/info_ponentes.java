@@ -30,6 +30,7 @@ public class info_ponentes extends SherlockFragmentActivity {
 	Intent intent;
 	paginaweb pagina;
 	String[] data;
+	String biografia;
 	int[] objetos;
 	// double[] coordenadas;
 	ponentes_model datos;
@@ -195,8 +196,9 @@ public class info_ponentes extends SherlockFragmentActivity {
 
 		public void onClick(View view) {
 			Intent intent = new Intent(info_ponentes.this, biografia.class);
-			intent.putExtra("biografia", objetos[1]);
+			intent.putExtra("biografia_imagen", objetos[1]);
 			intent.putExtra("ponente", data[0]);
+			intent.putExtra("biografia", data[7]);
 			startActivity(intent);
 		}
 

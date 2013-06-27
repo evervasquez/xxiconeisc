@@ -92,7 +92,20 @@ public class ponentes extends SherlockFragment {
 						"https://www.facebook.com/arturocanez", 
 						"https://twitter.com/arturocanez",
 						null,
-						"http://pe.linkedin.com/in/arturocanez"};
+						"http://pe.linkedin.com/in/arturocanez",
+						"<html><head><meta charset=utf-8><style type='text/css'>"
+								+ "body {font-size: 15px }</style></head><body><div style=text-align:justify><h2>Extract</h2>Entrepreneur with 10+ years of experience engaged " +
+								"in the development, creation and implementation of web-based projects, with relevant experience " +
+								"in travel companies. Director Lima Valley, Co-Founder & Mentor @Startup Academy, Organizer & Advisor " +
+								"Startup World, Wayra Perú Mentor Especialidades:entrepreneurship, internet business development, " +
+								"startups, digital marketing, digital analytics, seo, sem ecommerce, innovation, mobile</br>" +
+								"<h2>Experiencia</h2><strong>Co-Fundador</strong></br>Startup Academy LA</br>Startup Academy is a program that provides business " +
+								"model training and mentoring to help entrepreneurs on their road to success.<br>" +
+								"</br><strong>Director</strong></br>Lima Valley</br>Lima Valley is a non-profit organization in Peru that " +
+								"focuses on growing a community that promotes an entrepreneurial and innovative environment for the peruvian " +
+								"tech ecosystem.</div></body></html>"
+						
+						};
 
 				// imagenes = icono, img_lista,img_compartir
 				objeto = new int[] { R.drawable.arturo_canez,R.drawable.limavalley};
@@ -114,7 +127,18 @@ public class ponentes extends SherlockFragment {
 						null,
 						null,
 						"manuel@cise.ufl.edu",
-						null
+						null,
+						"<html><head><meta charset=utf-8><style type='text/css'>"
+								+ "body {font-size: 15px }</style></head><body><div style=text-align:justify><h2>Extract</h2>Entrepreneur with 10+ years of experience engaged " +
+								"in the development, creation and implementation of web-based projects, with relevant experience " +
+								"in travel companies. Director Lima Valley, Co-Founder & Mentor @Startup Academy, Organizer & Advisor " +
+								"Startup World, Wayra Perú Mentor Especialidades:entrepreneurship, internet business development, " +
+								"startups, digital marketing, digital analytics, seo, sem ecommerce, innovation, mobile</br>" +
+								"<h2>Experiencia</h2><strong>Co-Fundador</strong></br>Startup Academy LA</br>Startup Academy is a program that provides business " +
+								"model training and mentoring to help entrepreneurs on their road to success.<br>" +
+								"</br><strong>Director</strong></br>Lima Valley</br>Lima Valley is a non-profit organization in Peru that " +
+								"focuses on growing a community that promotes an entrepreneurial and innovative environment for the peruvian " +
+								"tech ecosystem.</div></body></html>"
 				};
 				
 				objeto = new int[] { R.drawable.manuel_bermudez,R.drawable.limavalley};
@@ -135,7 +159,19 @@ public class ponentes extends SherlockFragment {
 				null,
 				null,
 				null,
-				null};
+				null,
+				"<html><head><meta charset=utf-8><style type='text/css'>"
+						+ "body {font-size: 15px }</style></head><body><div style=text-align:justify><h2>Extract</h2>Entrepreneur with 10+ years of experience engaged " +
+						"in the development, creation and implementation of web-based projects, with relevant experience " +
+						"in travel companies. Director Lima Valley, Co-Founder & Mentor @Startup Academy, Organizer & Advisor " +
+						"Startup World, Wayra Perú Mentor Especialidades:entrepreneurship, internet business development, " +
+						"startups, digital marketing, digital analytics, seo, sem ecommerce, innovation, mobile</br>" +
+						"<h2>Experiencia</h2><strong>Co-Fundador</strong></br>Startup Academy LA</br>Startup Academy is a program that provides business " +
+						"model training and mentoring to help entrepreneurs on their road to success.<br>" +
+						"</br><strong>Director</strong></br>Lima Valley</br>Lima Valley is a non-profit organization in Peru that " +
+						"focuses on growing a community that promotes an entrepreneurial and innovative environment for the peruvian " +
+						"tech ecosystem.</div></body></html>"
+				};
 				
 				objeto = new int[] { R.drawable.kemper_valverde,R.drawable.limavalley};
 				
@@ -155,7 +191,19 @@ public class ponentes extends SherlockFragment {
 				"https://www.facebook.com/avid.romangonzalez",
 				"https://twitter.com/Avid_RG",
 				"avid.roman-gonzales@ieee.org",
-				"http://pe.linkedin.com/pub/avid-roman-gonzalez/2a/a74/9"};
+				"http://pe.linkedin.com/pub/avid-roman-gonzalez/2a/a74/9",
+				"<html><head><meta charset=utf-8><style type='text/css'>"
+						+ "body {font-size: 15px }</style></head><body><div style=text-align:justify><h2>Extract</h2>Entrepreneur with 10+ years of experience engaged " +
+						"in the development, creation and implementation of web-based projects, with relevant experience " +
+						"in travel companies. Director Lima Valley, Co-Founder & Mentor @Startup Academy, Organizer & Advisor " +
+						"Startup World, Wayra Perú Mentor Especialidades:entrepreneurship, internet business development, " +
+						"startups, digital marketing, digital analytics, seo, sem ecommerce, innovation, mobile</br>" +
+						"<h2>Experiencia</h2><strong>Co-Fundador</strong></br>Startup Academy LA</br>Startup Academy is a program that provides business " +
+						"model training and mentoring to help entrepreneurs on their road to success.<br>" +
+						"</br><strong>Director</strong></br>Lima Valley</br>Lima Valley is a non-profit organization in Peru that " +
+						"focuses on growing a community that promotes an entrepreneurial and innovative environment for the peruvian " +
+						"tech ecosystem.</div></body></html>"
+				};
 				
 				objeto = new int[] { R.drawable.roman_gonzales,R.drawable.limavalley};
 				
@@ -176,7 +224,19 @@ public class ponentes extends SherlockFragment {
 				"https://www.facebook.com/johnsuarezr",
 				"https://twitter.com/johnsuarezr",
 				"johnsuarezr@hotmail.com",
-				null};
+				null,
+				"<html><head><meta charset=utf-8><style type='text/css'>"
+						+ "body {font-size: 15px }</style></head><body><div style=text-align:justify><h2>Extract</h2>Entrepreneur with 10+ years of experience engaged " +
+						"in the development, creation and implementation of web-based projects, with relevant experience " +
+						"in travel companies. Director Lima Valley, Co-Founder & Mentor @Startup Academy, Organizer & Advisor " +
+						"Startup World, Wayra Perú Mentor Especialidades:entrepreneurship, internet business development, " +
+						"startups, digital marketing, digital analytics, seo, sem ecommerce, innovation, mobile</br>" +
+						"<h2>Experiencia</h2><strong>Co-Fundador</strong></br>Startup Academy LA</br>Startup Academy is a program that provides business " +
+						"model training and mentoring to help entrepreneurs on their road to success.<br>" +
+						"</br><strong>Director</strong></br>Lima Valley</br>Lima Valley is a non-profit organization in Peru that " +
+						"focuses on growing a community that promotes an entrepreneurial and innovative environment for the peruvian " +
+						"tech ecosystem.</div></body></html>"
+				};
 				
 				objeto = new int[] { R.drawable.suarez_reymundo,R.drawable.limavalley};
 				
@@ -218,7 +278,19 @@ public class ponentes extends SherlockFragment {
 				"https://www.facebook.com/pedroantonio.gonzales.9",
 				null,
 				null,
-				null};
+				null,
+				"<html><head><meta charset=utf-8><style type='text/css'>"
+						+ "body {font-size: 15px }</style></head><body><div style=text-align:justify><h2>Extract</h2>Entrepreneur with 10+ years of experience engaged " +
+						"in the development, creation and implementation of web-based projects, with relevant experience " +
+						"in travel companies. Director Lima Valley, Co-Founder & Mentor @Startup Academy, Organizer & Advisor " +
+						"Startup World, Wayra Perú Mentor Especialidades:entrepreneurship, internet business development, " +
+						"startups, digital marketing, digital analytics, seo, sem ecommerce, innovation, mobile</br>" +
+						"<h2>Experiencia</h2><strong>Co-Fundador</strong></br>Startup Academy LA</br>Startup Academy is a program that provides business " +
+						"model training and mentoring to help entrepreneurs on their road to success.<br>" +
+						"</br><strong>Director</strong></br>Lima Valley</br>Lima Valley is a non-profit organization in Peru that " +
+						"focuses on growing a community that promotes an entrepreneurial and innovative environment for the peruvian " +
+						"tech ecosystem.</div></body></html>"
+				};
 				
 				objeto = new int[] { R.drawable.pedro_gonzales,R.drawable.limavalley};
 				
@@ -239,7 +311,19 @@ public class ponentes extends SherlockFragment {
 				"https://www.facebook.com/pedroantonio.gonzales.9",
 				null,
 				"crodriguezrivero@ieee.org",
-				"http://ar.linkedin.com/pub/cristian-rodriguez-rivero/18/b6a/74"};
+				"http://ar.linkedin.com/pub/cristian-rodriguez-rivero/18/b6a/74",
+				"<html><head><meta charset=utf-8><style type='text/css'>"
+						+ "body {font-size: 15px }</style></head><body><div style=text-align:justify><h2>Extract</h2>Entrepreneur with 10+ years of experience engaged " +
+						"in the development, creation and implementation of web-based projects, with relevant experience " +
+						"in travel companies. Director Lima Valley, Co-Founder & Mentor @Startup Academy, Organizer & Advisor " +
+						"Startup World, Wayra Perú Mentor Especialidades:entrepreneurship, internet business development, " +
+						"startups, digital marketing, digital analytics, seo, sem ecommerce, innovation, mobile</br>" +
+						"<h2>Experiencia</h2><strong>Co-Fundador</strong></br>Startup Academy LA</br>Startup Academy is a program that provides business " +
+						"model training and mentoring to help entrepreneurs on their road to success.<br>" +
+						"</br><strong>Director</strong></br>Lima Valley</br>Lima Valley is a non-profit organization in Peru that " +
+						"focuses on growing a community that promotes an entrepreneurial and innovative environment for the peruvian " +
+						"tech ecosystem.</div></body></html>"
+				};
 				
 				objeto = new int[] { R.drawable.rodriguez_rivero,R.drawable.limavalley};
 				
