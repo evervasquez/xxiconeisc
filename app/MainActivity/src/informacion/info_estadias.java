@@ -105,13 +105,14 @@ public class info_estadias extends SherlockFragmentActivity {
 		return shareIntent;
 	}
 
+	@SuppressWarnings("deprecation")
 	@SuppressLint("WorldReadableFiles")
 	private void copyPrivateRawResuorceToPubliclyAccessibleFile() throws UnsupportedEncodingException {
 		InputStream inputStream = null;
 		FileOutputStream outputStream = null;
 		try {
 			inputStream = new ByteArrayInputStream(dataBD[9].getBytes("UTF-8"));
-			//inputStream = getResources().openRawResource(dataBD[9]);//edite
+			inputStream = getResources().openRawResource(R.drawable.cone);//edite
 			outputStream = openFileOutput(SHARED_FILE_NAME,
 					Context.MODE_WORLD_READABLE);
 			byte[] buffer = new byte[1024];
