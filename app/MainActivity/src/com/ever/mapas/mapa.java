@@ -51,7 +51,6 @@ public class mapa extends FragmentActivity {
 					(SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map));
 			mMarker = mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(coordenadas[0],coordenadas[1])).title(estadia).snippet(direccion));
 			//mGoogleMap.moveCamera(CameraUpdateFactory.newLatLng(mMarker.getMarker().getPosition()));
-			mMarker.showInfoWindow();
 			mGoogleMap.setInitialCameraPosition(mMarker.getMarker().getPosition());
 			mGoogleMap.setMyLocationEnabled(true);
 			mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(coordenadas[0],coordenadas[1]), 2));

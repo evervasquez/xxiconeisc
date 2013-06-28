@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ever.conesic"
-    android:versionCode="1"
-    android:versionName="1" >
+    android:versionCode="3"
+    android:versionName="2" >
 
     <permission
         android:name="com.ever.coneisc.permission.MAPS_RECEIVE"
@@ -37,7 +37,7 @@
         android:theme="@style/SampleTheme" >
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyChkWURyuWQxoyC8l_EuGPKdxG2KtJtJPc" />
+            android:value="AIzaSyBTnfbrsxE7qO6fPw2gomV5IfThqru0vdo" />
 
         <activity
             android:name="com.ever.conesic.MainActivity"
