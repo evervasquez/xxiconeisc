@@ -27,7 +27,7 @@ public class edecanes extends SherlockFragment {
 		super.onActivityCreated(savedInstanceState);
 		tableView = (UITableView) getView().findViewById(R.id.tableView);
 		titulo =(TextView) getView().findViewById(R.id.titulo);
-		titulo.setText("Universidades por regiÃ³n");
+		titulo.setText("Universidades por región");
 		fonts.cambiarfont_actionbar(getSherlockActivity(), "fonts/ArtistMedium.ttf");
 		fonts.cambiarfont(getSherlockActivity(), R.id.titulo, "fonts/ArtistMedium.ttf");
 		createList();

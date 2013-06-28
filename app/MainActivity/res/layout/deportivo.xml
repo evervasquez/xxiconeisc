@@ -11,10 +11,5 @@
         android:layout_height="wrap_content"
         android:padding="15dp"
         android:textAppearance="@android:style/TextAppearance.Medium" />
-    <Button 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Descargar Bases"
-        />
 
 </LinearLayout>

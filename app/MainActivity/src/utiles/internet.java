@@ -3,7 +3,6 @@ package utiles;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-
 public class internet {
 	public static boolean checkConex(Context contexto) {
 		boolean hasConnectedWifi = false;
@@ -26,5 +25,6 @@ public class internet {
 		return hasConnectedWifi || hasConnectedMobile;
 
 	}
-
+	
 }
+

@@ -60,7 +60,7 @@ public class info_estadias extends SherlockFragmentActivity {
 		// poner todo el código
 		setContentView(R.layout.info_concursos);
 		fonts.cambiarfont_actionbar(this, "fonts/ArtistMedium.ttf");
-		getSupportActionBar().setTitle("Descripción");
+		getSupportActionBar().setTitle("Descripci�n");
 		mButton1 = (UIButton) findViewById(R.id.myButton1);
 		try {
 			objetoBD = new basedatos(getApplicationContext());
