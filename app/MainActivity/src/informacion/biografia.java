@@ -49,7 +49,7 @@ public class biografia extends SherlockActivity {
 		webView.setVerticalScrollBarEnabled(true);
 		webView.setVerticalFadingEdgeEnabled(true);
 		webView.setVerticalScrollbarOverlay(true);
-		webView.loadData(biografia, "text/html", "UTF-8");
+		webView.loadDataWithBaseURL(null,biografia, "text/html", "UTF-8",null);
 		
 		ImageView paper = (ImageView) findViewById(R.id.image_header);
 		Resources res = getResources();

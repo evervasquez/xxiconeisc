@@ -46,7 +46,7 @@ public class Xxiconeisc extends SherlockFragment {
 		webView.setVerticalScrollBarEnabled(true);
 		webView.setVerticalFadingEdgeEnabled(true);
 		webView.setVerticalScrollbarOverlay(true);
-		webView.loadData(webPage_es, "text/html", "UTF-8");
+		webView.loadDataWithBaseURL(null,webPage_es, "text/html", "UTF-8",null);
 	
 		ImageView paper = (ImageView) getView().findViewById(R.id.image_header);
 		Resources res = getResources();

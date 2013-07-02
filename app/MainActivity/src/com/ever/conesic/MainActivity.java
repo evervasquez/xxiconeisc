@@ -153,9 +153,8 @@ public class MainActivity extends SherlockFragmentActivity implements
 			newFragment = new Xxiconeisc();
 			break;
 		case R.id.conocenos:
-			pagina = new paginaweb();
-			pagina.paginaWeb(this, "http://coneisc.pe/web/presentacion");
-			return;
+			newFragment = new conocenos();
+			break;
 		case R.id.ponentes:
 			newFragment = new ponentes();
 			break;

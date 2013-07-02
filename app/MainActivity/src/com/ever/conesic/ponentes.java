@@ -60,7 +60,7 @@ public class ponentes extends SherlockFragment {
 				"P.h.D. Manuel Bermúdez",
 				"Coor. de Relaciones con America Latina");
 		tableView.addBasicItem(R.drawable.kemper_valverde,
-				"DR. Nicolós Kemper Valverde", "Prof. Inteligencia Artificial");
+				"DR. Nicolás Kemper Valverde", "Prof. Inteligencia Artificial");
 		tableView.addBasicItem(R.drawable.roman_gonzales,
 				"Mg. Avid Roman Gonzales ",
 				"Mg. Automatización Industrial y Humana");
@@ -121,7 +121,7 @@ public class ponentes extends SherlockFragment {
 			case 1:
 				
 				data = new String[] { 
-						"Dr. Manuel E. Bermudez",
+						"Dr. Manuel E. Bermúdez",
 						"University of Florida - USA",
 						"http://tarapotoventas.tk/descargas/cv/Manuel_Bermudez-CV.pdf",
 						null,
