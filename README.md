@@ -9,7 +9,7 @@ XXI CONEISC
 Developed By
 ============
 
-* eveR Vásquez - <sonico999@gmail.com>
+* eveR Vásquez - <ever_vasquez06@hotmail.com>
 
 
 
